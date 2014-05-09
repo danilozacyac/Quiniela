@@ -117,6 +117,7 @@
                     <telerik:RadButton ID="RbtnRegistrar" runat="server" Text="Registrar" OnClick="RbtnRegistrar_Click"></telerik:RadButton>
                 </td>
                 <td>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
                 </td>
             </tr>
         </table>

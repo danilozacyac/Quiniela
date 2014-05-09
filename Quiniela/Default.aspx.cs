@@ -33,4 +33,9 @@ public partial class Default : System.Web.UI.Page
 
         ClientScript.RegisterStartupScript(GetType(), "alert", "alert('" + message + "');", true);
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("RadGridAutomaticCrudOperations.aspx");
+    }
 }
