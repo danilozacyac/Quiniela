@@ -76,6 +76,13 @@
     <Compile Include="LlenaQuiniela.aspx.designer.cs">
       <DependentUpon>LlenaQuiniela.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\EquiposModel.cs" />
     <Compile Include="Models\PartidosModel.cs" />
     <Compile Include="Models\UsuariosModel.cs" />
@@ -92,7 +99,15 @@
     <Compile Include="RadGridAutomaticCrudOperations.aspx.designer.cs">
       <DependentUpon>RadGridAutomaticCrudOperations.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReviewPronosResults.aspx.cs">
+      <DependentUpon>ReviewPronosResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewPronosResults.aspx.designer.cs">
+      <DependentUpon>ReviewPronosResults.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Singleton\EquiposSingleton.cs" />
+    <Compile Include="Singleton\PartidosSingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\RadCaptcha\0.wav" />
@@ -145,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LlenaQuiniela.aspx" />
+    <Content Include="LogIn.aspx" />
     <Content Include="RadGridAutomaticCrudOperations.aspx" />
     <Resource Include="Resources\1.png" />
     <Resource Include="Resources\2.png" />
@@ -178,6 +194,8 @@
     <Resource Include="Resources\28.png" />
     <Resource Include="Resources\31.png" />
     <Resource Include="Resources\27.png" />
+    <Resource Include="Resources\brazucafavicon.ico" />
+    <Content Include="ReviewPronosResults.aspx" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>

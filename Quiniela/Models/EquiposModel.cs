@@ -15,7 +15,7 @@ namespace Quiniela.Models
 
             try
             {
-                string cstr = @"Data Source=LUIS-PC\SQLEXPRESS;Initial Catalog=QuinielaMundial;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+                string cstr = @"Data Source=WIN-KT1RP3JF2N6\MISERVER;Initial Catalog=QuinielaMundial;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
                 using (SqlConnection conn = new SqlConnection(cstr))
                 {
                     conn.Open();

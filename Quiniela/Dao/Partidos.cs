@@ -10,7 +10,9 @@ namespace Quiniela.Dao
         private int idPartido;
         private DateTime fecha;
         private int idPaisLocal;
+        private string paisLocal;
         private int idPaisVisita;
+        private string paisVisita;
         private int golesLocal;
         private int golesVisita;
         private int idPaisGanador;
@@ -51,6 +53,18 @@ namespace Quiniela.Dao
             }
         }
 
+        public string PaisLocal
+        {
+            get
+            {
+                return this.paisLocal;
+            }
+            set
+            {
+                this.paisLocal = value;
+            }
+        }
+
         public int IdPaisVisita
         {
             get
@@ -60,6 +74,18 @@ namespace Quiniela.Dao
             set
             {
                 this.idPaisVisita = value;
+            }
+        }
+
+        public string PaisVisita
+        {
+            get
+            {
+                return this.paisVisita;
+            }
+            set
+            {
+                this.paisVisita = value;
             }
         }
 
