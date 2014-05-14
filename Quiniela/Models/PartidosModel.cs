@@ -10,7 +10,7 @@ namespace Quiniela.Models
 {
     public class PartidosModel
     {
-        private static string ConnectionString = ConfigurationManager.ConnectionStrings["MiBD"].ConnectionString;
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["QuinielaMundialConnectionString"].ConnectionString;
 
         /// <summary>
         /// Listado de partidos a jugarse durante la competición 
@@ -22,8 +22,8 @@ namespace Quiniela.Models
 
             try
             {
-                string cstr = @"Data Source=WIN-KT1RP3JF2N6\MISERVER;Initial Catalog=QuinielaMundial;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
-                using (SqlConnection conn = new SqlConnection(cstr))
+                //string cstr = @"Data Source=WIN-KT1RP3JF2N6\MISERVER;Initial Catalog=QuinielaMundial;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
@@ -67,7 +67,7 @@ namespace Quiniela.Models
         /// <param name="idUser"></param>
         public static void SetNewPronosticos(ObservableCollection<Partidos> listaPartidos, int idUser)
         {
-            SqlConnection connection = new SqlConnection(ConnectionString);
+            SqlConnection connection = new SqlConnection(connectionString);
 
             try
             {
@@ -92,7 +92,7 @@ namespace Quiniela.Models
                     command.Parameters["@GolesVisita"].Value = partido.GolesVisita;
 
                     command.Parameters.Add("@IdPaisGanador", SqlDbType.NChar);
-                    command.Parameters["@IdPaisGanador"].Value = partido.IdPaisGanador;
+                    command.Parameters["@IdPaisGanador"].Value = (partido.IdPaisGanador == 0) ? 999 : partido.IdPaisGanador;
 
                     command.Parameters.Add("@PuntosGanados", SqlDbType.NChar);
                     command.Parameters["@PuntosGanados"].Value = 0;

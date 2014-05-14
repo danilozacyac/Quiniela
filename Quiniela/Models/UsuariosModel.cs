@@ -10,15 +10,14 @@ namespace Quiniela.Models
     public class UsuariosModel
     {
 
-
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["QuinielaMundialConnectionString"].ConnectionString;
 
         public string SetNewUser(Usuarios usuario)
         {
             string message = "Registro no completado, intente más tarde";
 
             int userId = 0;
-            string constr = ConfigurationManager.ConnectionStrings["MiBD"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("Inserta_Usuario"))
                 {
@@ -53,6 +52,44 @@ namespace Quiniela.Models
             }
 
             return message;
+        }
+
+        public Usuarios ValidateUser(string username)
+        {
+            Usuarios user = null;
+
+            try
+            {
+                
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "SELECT * FROM Usuarios WHERE Nickname = @Nickname" ;
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@Nickname", username);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        user = new Usuarios();
+                        user.Idusuario = reader["IdUsuario"] as int? ?? -1;
+                        user.Password = reader["Password"].ToString();
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+            return user;
         }
 
     }

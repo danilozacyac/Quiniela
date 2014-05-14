@@ -108,6 +108,7 @@
     </Compile>
     <Compile Include="Singleton\EquiposSingleton.cs" />
     <Compile Include="Singleton\PartidosSingleton.cs" />
+    <Compile Include="Utils\PasswordHash.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\RadCaptcha\0.wav" />
@@ -243,7 +244,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

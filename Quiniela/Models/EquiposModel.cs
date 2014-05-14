@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using Quiniela.Dao;
@@ -8,6 +9,7 @@ namespace Quiniela.Models
 {
     public class EquiposModel
     {
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["QuinielaMundialConnectionString"].ConnectionString;
 
         public static ObservableCollection<Equipos> GetEquipos()
         {
@@ -15,8 +17,8 @@ namespace Quiniela.Models
 
             try
             {
-                string cstr = @"Data Source=WIN-KT1RP3JF2N6\MISERVER;Initial Catalog=QuinielaMundial;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
-                using (SqlConnection conn = new SqlConnection(cstr))
+                
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 

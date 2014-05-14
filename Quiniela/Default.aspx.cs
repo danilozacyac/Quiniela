@@ -11,6 +11,8 @@ using System.Web.UI.HtmlControls;
 using Telerik.Web.UI;
 using Quiniela.Dao;
 using Quiniela.Models;
+using System.Security.Cryptography;
+using Quiniela.Utils;
 
 public partial class Default : System.Web.UI.Page 
 {
@@ -27,7 +29,7 @@ public partial class Default : System.Web.UI.Page
         usuario.Nombre = TxtNombre.Text;
         usuario.Usuario = txtUsername.Text;
         usuario.Mail = txtEmail.Text;
-        usuario.Password = txtPassword.Text;
+        usuario.Password = PasswordHash.CreateHash(txtPassword.Text);
 
         string message = new UsuariosModel().SetNewUser(usuario);
 

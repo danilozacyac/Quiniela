@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using Quiniela.Dao;
+using Quiniela.Models;
+using Quiniela.Utils;
 
 namespace Quiniela
 {
@@ -11,6 +10,35 @@ namespace Quiniela
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void RBtnIngreso_Click(object sender, EventArgs e)
+        {
+            Usuarios user = new UsuariosModel().ValidateUser(TxtUsuario.Text);
+
+            if (user != null)
+            {
+
+                bool isCorrect = PasswordHash.ValidatePassword(txtPassword.Text, user.Password);
+
+                if (isCorrect)
+                {
+                    Session["Idusuario"] = user.Idusuario;
+                    user = null;
+
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Verifique sus datos de inicio de sesión');", true);
+                    user = null;
+                }
+
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Verifique sus datos de inicio de sesión');", true);
+            }
 
         }
     }
