@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace Quiniela.Dao
 {
@@ -16,6 +14,9 @@ namespace Quiniela.Dao
         private int golesLocal;
         private int golesVisita;
         private int idPaisGanador;
+        private int tipoAcierto;
+
+        
 
         public int IdPartido
         {
@@ -122,6 +123,18 @@ namespace Quiniela.Dao
             set
             {
                 this.idPaisGanador = value;
+            }
+        }
+
+        public int TipoAcierto
+        {
+            get
+            {
+                return this.tipoAcierto;
+            }
+            set
+            {
+                this.tipoAcierto = value;
             }
         }
     }

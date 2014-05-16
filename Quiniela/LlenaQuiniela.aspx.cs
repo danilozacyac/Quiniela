@@ -20,28 +20,34 @@ namespace Quiniela
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                      
 
-
-            if (Session["Partidos"] == null)
+            if (Session["IdUsuario"] == null)
             {
-                listaPartidos = PartidosModel.GetPartidos();
-                Session["Partidos"] = listaPartidos;
-                Session["Index"] = 0;
-                index = 0;
-                RBtnAnterior.Enabled = false;
-                this.SetAnotherMatch();
-
+                Response.Redirect("LogIn.aspx");
             }
             else
             {
-                listaPartidos = Session["Partidos"] as ObservableCollection<Partidos>;
-                index = Session["Index"] as int? ?? -1;
-                RBtnAnterior.Enabled = (index == 0) ? false : true;
-                RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
-                this.GetMatchResult();
-            }
 
+
+                if (Session["Partidos"] == null)
+                {
+                    listaPartidos = PartidosModel.GetPartidos();
+                    Session["Partidos"] = listaPartidos;
+                    Session["Index"] = 0;
+                    index = 0;
+                    RBtnAnterior.Enabled = false;
+                    this.SetAnotherMatch();
+
+                }
+                else
+                {
+                    listaPartidos = Session["Partidos"] as ObservableCollection<Partidos>;
+                    index = Session["Index"] as int? ?? -1;
+                    RBtnAnterior.Enabled = (index == 0) ? false : true;
+                    RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
+                    this.GetMatchResult();
+                }
+            }
             
         }
 
