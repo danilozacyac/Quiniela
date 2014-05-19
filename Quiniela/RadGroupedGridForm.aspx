@@ -34,16 +34,19 @@
 
                 </header>
                 
-                <nav >
-                    <ul id="menu"> 
+                <nav style="background-color:#04B404; height:50px;" >
+                    <ul id="menu" > 
                         <li>
-                            <a id="A1" runat="server" href="~/">Home</a>
+                            <a id="A4" runat="server" href="~/">Llenar Quiniela</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="~/About">About</a>
+                            <a id="A1" runat="server" href="~/">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/Contact">Contact</a>
+                            <a id="A2" runat="server" href="~/About">Tabla General</a>
+                        </li>
+                        <li>
+                            <a id="A3" runat="server" href="~/Contact">Resultados</a>
                         </li>
                     </ul>
                 </nav>
@@ -86,7 +89,7 @@
                         </telerik:RadGrid>
                     </div>
                 </section>
-            </>
+            </div>
 
         </form>
     </body>

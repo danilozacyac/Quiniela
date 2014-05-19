@@ -118,6 +118,12 @@ footer, #footer
     font-size: .9em;
 }
 
+.whiteDiv
+{
+    height:50px;
+    width:100%;
+}
+
 /*/* MENU   
 ----------------------------------------------------------*/
 /*#menu
@@ -143,7 +149,8 @@ footer, #footer
 /* menu
 ----------------------------------------------------------*/
 ul#menu {
-    font-size: 1.3em;
+    font-size: 2em;
+    /*color:#f6f1f1;*/
     font-weight: 600;
     margin: 0 0 5px;
     padding: 0;
@@ -158,7 +165,7 @@ ul#menu {
 
         ul#menu li a {
             background: none;
-            color: #999;
+            color: #f6f1f1;
             text-decoration: none;
         }
 
@@ -207,6 +214,16 @@ input[type="password"]
 
 /* TABLE
 ----------------------------------------------------------*/
+
+.tablaGrupos
+{
+    border:hidden;
+    left:35%; 
+    position:relative;
+    font-size:larger;
+    font-weight:bold;
+    text-align:center;
+}
 
 table 
 {
@@ -330,3 +347,10 @@ div#title
 {
     width: 6em;
 }
+
+.gridcss
+      {
+          width:70%;
+          margin-left:auto !important;
+          margin-right:auto !important;
+      }

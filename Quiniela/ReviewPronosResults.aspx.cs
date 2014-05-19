@@ -10,6 +10,7 @@ namespace Quiniela
         protected void Page_Load(object sender, EventArgs e)
         {
             RadGrid1.DataSource = Session["Partidos"] as ObservableCollection<Partidos>;
+           
         }
     }
 }

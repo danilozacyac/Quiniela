@@ -9,7 +9,7 @@
 
 
 
-public partial class RadGroupedGridForm {
+public partial class MR2 {
     
     /// <summary>
     /// Control RadStyleSheetManager1.
@@ -82,6 +82,24 @@ public partial class RadGroupedGridForm {
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
+    
+    /// <summary>
+    /// Control A5.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A5;
+    
+    /// <summary>
+    /// Control ExportToPdf.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.ImageButton ExportToPdf;
     
     /// <summary>
     /// Control DataSource1.

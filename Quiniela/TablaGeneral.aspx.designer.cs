@@ -9,7 +9,7 @@
 
 
 
-public partial class RadGridAutomaticCrudOperations {
+public partial class TablaGeneral {
     
     /// <summary>
     /// Control RadStyleSheetManager1.
@@ -39,40 +39,67 @@ public partial class RadGridAutomaticCrudOperations {
     protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
     
     /// <summary>
-    /// Control RadAjaxLoadingPanel1.
+    /// Control RadAjaxManager1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
+    protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
     
     /// <summary>
-    /// Control RadAjaxPanel1.
+    /// Control A4.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel1;
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A4;
     
     /// <summary>
-    /// Control RadGrid1.
+    /// Control A1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadGrid RadGrid1;
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
     
     /// <summary>
-    /// Control RadWindowManager1.
+    /// Control A2.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadWindowManager RadWindowManager1;
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
+    
+    /// <summary>
+    /// Control A3.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
+    
+    /// <summary>
+    /// Control A5.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A5;
+    
+    /// <summary>
+    /// Control RadTabStrip1.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadTabStrip RadTabStrip1;
     
     /// <summary>
     /// Control DataSource1.
@@ -84,11 +111,11 @@ public partial class RadGridAutomaticCrudOperations {
     protected global::System.Web.UI.WebControls.SqlDataSource DataSource1;
     
     /// <summary>
-    /// Control RadSkinManager1.
+    /// Control RadGrid1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadSkinManager RadSkinManager1;
+    protected global::Telerik.Web.UI.RadGrid RadGrid1;
 }

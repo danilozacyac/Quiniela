@@ -26,7 +26,7 @@ namespace Quiniela
                 {
                     Session["Idusuario"] = user.Idusuario;
                     user = null;
-
+                    Response.Redirect("MR2.aspx");
                 }
                 else
                 {
