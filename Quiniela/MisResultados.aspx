@@ -44,7 +44,7 @@
             </telerik:RadScriptBlock>
             <asp:ImageButton OnClientClick="return exportToPdf()" ID="ImageButton1" Style="cursor: pointer;" ImageUrl="Pdf.png" AlternateText="Export to PDF" runat="server" />
 
-            <asp:SqlDataSource SelectCommand=""<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
             <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1">
                 <ExportSettings FileName="MiQuiniela" OpenInNewWindow="False">

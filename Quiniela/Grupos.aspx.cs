@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Quiniela.Dao;
 using Quiniela.Models;
 
@@ -16,27 +13,27 @@ namespace Quiniela
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["IdUsuario"] == null)
-            //    Response.Redirect("logIn.aspx");
-            //else
-            //{
-            grupos = GruposModel.GetGrupos();
-            RGGrupoA.DataSource = this.GetGroupStadistics('A');
+            if (Session["IdUsuario"] == null)
+                Response.Redirect("logIn.aspx");
+            else
+            {
+                grupos = GruposModel.GetGrupos();
+                RGGrupoA.DataSource = this.GetGroupStadistics('A');
 
-            RGGrupoB.DataSource = this.GetGroupStadistics('B');
+                RGGrupoB.DataSource = this.GetGroupStadistics('B');
 
-            RGGrupoC.DataSource = this.GetGroupStadistics('C');
+                RGGrupoC.DataSource = this.GetGroupStadistics('C');
 
-            RGGrupoD.DataSource = this.GetGroupStadistics('D');
+                RGGrupoD.DataSource = this.GetGroupStadistics('D');
 
-            RGGrupoE.DataSource = this.GetGroupStadistics('E');
+                RGGrupoE.DataSource = this.GetGroupStadistics('E');
 
-            RGGrupoF.DataSource = this.GetGroupStadistics('F');
+                RGGrupoF.DataSource = this.GetGroupStadistics('F');
 
-            RGGrupoG.DataSource = this.GetGroupStadistics('G');
+                RGGrupoG.DataSource = this.GetGroupStadistics('G');
 
-            RGGrupoH.DataSource = this.GetGroupStadistics('H');
-            //}
+                RGGrupoH.DataSource = this.GetGroupStadistics('H');
+            }
         }
 
         private List<GruposDao> GetGroupStadistics(char groups)

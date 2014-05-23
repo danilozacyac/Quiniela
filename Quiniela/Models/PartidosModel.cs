@@ -44,6 +44,7 @@ namespace Quiniela.Models
                         partido.GolesVisita = reader["GolesVisita"] as int? ?? -1;
                         partido.PaisLocal = reader["ELocal"].ToString();
                         partido.PaisVisita = reader["EVisita"].ToString();
+                        partido.IdPaisGanador = -23;
 
                         listaPartidos.Add(partido);
                     }

@@ -91,8 +91,8 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
-                                        <telerik:RadGrid ID="RGGrupoA" runat="server" class="gridcss" Width="70%">
+                                    <div class="gridcss" >
+                                        <telerik:RadGrid ID="RGGrupoA" runat="server" >
                                             <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
@@ -147,9 +147,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoB" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView  AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -203,9 +203,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoC" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -259,9 +259,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoD" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -315,9 +315,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoE" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -371,9 +371,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoF" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -427,9 +427,9 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
+                                    <div class="gridcss">
                                         <telerik:RadGrid ID="RGGrupoG" runat="server">
-                                            <MasterTableView Width="80%" AutoGenerateColumns="false">
+                                            <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 
                                                     <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
@@ -483,8 +483,8 @@
                                         </table>
                                     </div>
                                     <div class="whiteDiv" ></div>
-                                    <div>
-                                        <telerik:RadGrid ID="RGGrupoH" runat="server" Width="80%">
+                                    <div class="gridcss">
+                                        <telerik:RadGrid ID="RGGrupoH" runat="server">
                                             <MasterTableView AutoGenerateColumns="false">
                                                 <Columns>
 

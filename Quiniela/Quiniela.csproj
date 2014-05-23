@@ -184,6 +184,8 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Resource Include="Content\back.jpg" />
+    <Content Include="Content\InitialSite.css" />
     <Content Include="Content\Probando.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
@@ -239,11 +241,13 @@
     <Resource Include="Resources\brazucafavicon.ico" />
     <Content Include="RadGridExportWebForm.aspx" />
     <Content Include="RadGroupedGridForm.aspx" />
+    <Resource Include="Resources\back.jpg" />
     <Content Include="ReviewPronosResults.aspx" />
     <Content Include="TablaGeneral.aspx" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\LawebdeDanilo.pubxml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -288,7 +292,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

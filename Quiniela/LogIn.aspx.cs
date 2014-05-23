@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Telerik.Web.UI;
+using System;
 using System.Linq;
 using Quiniela.Dao;
 using Quiniela.Models;
@@ -6,7 +7,7 @@ using Quiniela.Utils;
 
 namespace Quiniela
 {
-    public partial class LogIn : System.Web.UI.Page
+    public partial class LogIn : Telerik.Web.UI.RadAjaxPage  // System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

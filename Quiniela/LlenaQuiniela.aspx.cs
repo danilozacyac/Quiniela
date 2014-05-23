@@ -21,13 +21,13 @@ namespace Quiniela
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //if (Session["IdUsuario"] == null)
-            //{
-            //    Response.Redirect("LogIn.aspx");
-            //}
-            //else
-            //{
-
+            if (Session["IdUsuario"] == null)
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+            else
+            {
+           
 
                 if (Session["Partidos"] == null)
                 {
@@ -45,9 +45,22 @@ namespace Quiniela
                     index = Session["Index"] as int? ?? -1;
                     RBtnAnterior.Enabled = (index == 0) ? false : true;
                     RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
-                   //this.GetMatchResult();
                 }
-           // }
+
+                if (Session["Complete"] == null || Convert.ToBoolean(Session["Complete"]) == false)
+                {
+                    quinielaP.Visible = true;
+                    mexicoP.Visible = false;
+                    RBtnGuardar.Visible = false;
+                }
+                else
+                {
+                    quinielaP.Visible = false;
+                    mexicoP.Visible = true;
+                    RBtnGuardar.Visible = true;
+                }
+
+            }
             
         }
 
@@ -79,25 +92,12 @@ namespace Quiniela
 
         private void GetMatchResult()
         {
-            //listaPartidos[index].GolesLocal = Convert.ToInt32(RTxtGolesLoca.Text);
-            //listaPartidos[index].GolesVisita = Convert.ToInt32(RTxtGolesVisita.Text);
-
             if (RadLocal.Checked == true)
                 listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisLocal;
             else if (RadVisita.Checked == true)
                 listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisVisita;
             else if (RadEmpate.Checked == true)
                 listaPartidos[index].IdPaisGanador = 999;
-            
-
-            //if (listaPartidos[index].GolesLocal == listaPartidos[index].GolesVisita)
-            //{
-            //    listaPartidos[index].IdPaisGanador = 999; //Empate
-            //}
-            //else
-            //{
-            //    listaPartidos[index].IdPaisGanador = (listaPartidos[index].GolesLocal > listaPartidos[index].GolesVisita) ? listaPartidos[index].IdPaisLocal : listaPartidos[index].IdPaisVisita;
-            //}
         }
 
         private void SetAnotherMatch()
@@ -106,24 +106,29 @@ namespace Quiniela
             RadEmpate.Checked = false;
             RadVisita.Checked = false;
 
-            Partidos partido = listaPartidos[index];
-
-            LblLocal.Text = partido.PaisLocal;
-            ImLocal.ImageUrl = "~/Resources/" + partido.IdPaisLocal + ".png";
-            //RTxtGolesLoca.Text = partido.GolesLocal.ToString();
-
-            LblVisita.Text = partido.PaisVisita;
-            ImVisita.ImageUrl = "~/Resources/" + partido.IdPaisVisita + ".png";
-            //RTxtGolesVisita.Text = partido.GolesVisita.ToString(); 
-
-            if (partido.IdPaisGanador != 0)
+            if (index < listaPartidos.Count())
             {
-                if (partido.IdPaisGanador == partido.IdPaisLocal)
-                    RadLocal.Checked = true;
-                else if (partido.IdPaisGanador == partido.IdPaisVisita)
-                    RadVisita.Checked = true;
-                else
-                    RadEmpate.Checked = true;
+                Partidos partido = listaPartidos[index];
+
+                LblLocal.Text = partido.PaisLocal;
+                ImLocal.ImageUrl = "~/Resources/" + partido.IdPaisLocal + ".png";
+
+                LblVisita.Text = partido.PaisVisita;
+                ImVisita.ImageUrl = "~/Resources/" + partido.IdPaisVisita + ".png";
+
+                if (partido.IdPaisGanador != 0)
+                {
+                    if (partido.IdPaisGanador == partido.IdPaisLocal)
+                        RadLocal.Checked = true;
+                    else if (partido.IdPaisGanador == partido.IdPaisVisita)
+                        RadVisita.Checked = true;
+                    else if (partido.IdPaisGanador == 999)
+                        RadEmpate.Checked = true;
+                }
+            }
+            else
+            {
+                RBtnSiguientePaso_Click(null, null);
             }
         }
 
@@ -143,7 +148,45 @@ namespace Quiniela
 
         protected void RBtnGuardar_Click(object sender, EventArgs e)
         {
+            listaPartidos[1].GolesLocal = Convert.ToInt16(RTxtLocal1.Text);
+            listaPartidos[1].GolesVisita = Convert.ToInt16(RTxtVisita1.Text);
+
+            listaPartidos[16].GolesLocal = Convert.ToInt16(RTxtLocal2.Text);
+            listaPartidos[16].GolesVisita = Convert.ToInt16(RTxtVisita2.Text);
+
+            listaPartidos[33].GolesLocal = Convert.ToInt16(RTxtLocal3.Text);
+            listaPartidos[33].GolesVisita = Convert.ToInt16(RTxtVisita3.Text);
+
             PartidosModel.SetNewPronosticos(listaPartidos,Convert.ToInt32(Session["IdUsuario"]));
+        }
+
+        protected void RBtnSiguientePaso_Click(object sender, EventArgs e)
+        {
+            bool complete = true;
+
+            for (int partido = 0; partido < listaPartidos.Count(); partido++)
+            {
+                if (listaPartidos[partido].IdPaisGanador == -23)
+                {
+                    Session["Index"] = partido;
+                    ClientScript.RegisterStartupScript(GetType(), "alert", "alert('No has seleccionado el resultado de todos los partidos');", true);
+                    complete = false;
+                    break;
+                }
+            }
+
+            Session["Complete"] = complete;
+
+            if (complete)
+            {
+                quinielaP.Visible = false;
+                mexicoP.Visible = true;
+                RBtnGuardar.Visible = true;
+            }
+            else
+            {
+                Page_Load(null, null);
+            }
         }
     }
 }

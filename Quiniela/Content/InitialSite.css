@@ -83,13 +83,6 @@ page width. Or, you can specify an exact pixel width. */
     margin-right: auto;
 }
 
-.initialPage
-{
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 header, #header
 {
     position: relative;

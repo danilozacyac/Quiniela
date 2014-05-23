@@ -66,6 +66,15 @@ public partial class MisResultados {
     protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
     
     /// <summary>
+    /// Control DataSource1.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.SqlDataSource DataSource1;
+    
+    /// <summary>
     /// Control RadGrid1.
     /// </summary>
     /// <remarks>

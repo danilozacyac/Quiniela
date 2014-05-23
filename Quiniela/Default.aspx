@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="page">
+    <div class="initialPage">
         <header>
 			<div id="title">
 				<h1>Brasil 2014</h1>
