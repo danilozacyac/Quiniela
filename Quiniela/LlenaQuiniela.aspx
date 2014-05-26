@@ -121,13 +121,13 @@
                                     <tr>
                                         <td>
 
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtLocal1" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
+                                            <telerik:RadNumericTextBox  ID="RTxtLocal1" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"  Value="0">
 
                                             </telerik:RadNumericTextBox>
                                         </td>
                                         <td></td>
                                         <td>
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtVisita1" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
+                                            <telerik:RadNumericTextBox  ID="RTxtVisita1" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" Value="0"></telerik:RadNumericTextBox>
                                         </td>
                                     </tr>
                                     <tr>
@@ -157,13 +157,13 @@
                                     <tr>
                                         <td>
 
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtLocal2" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
+                                            <telerik:RadNumericTextBox  ID="RTxtLocal2" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" Value="0" >
 
                                             </telerik:RadNumericTextBox>
                                         </td>
                                         <td></td>
                                         <td>
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtVisita2" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
+                                            <telerik:RadNumericTextBox  ID="RTxtVisita2" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" Value="0"></telerik:RadNumericTextBox>
                                         </td>
                                     </tr>
                                     <tr>
@@ -193,13 +193,13 @@
                                     <tr>
                                         <td>
 
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtLocal3" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
+                                            <telerik:RadNumericTextBox  ID="RTxtLocal3" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" Value="0" >
 
                                             </telerik:RadNumericTextBox>
                                         </td>
                                         <td></td>
                                         <td>
-                                            <telerik:RadNumericTextBox DisplayText="0" ID="RTxtVisita3" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
+                                            <telerik:RadNumericTextBox  ID="RTxtVisita3" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" Value="0"></telerik:RadNumericTextBox>
                                         </td>
                                     </tr>
                                     <tr style="height:50px">
