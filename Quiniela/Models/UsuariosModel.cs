@@ -92,5 +92,42 @@ namespace Quiniela.Models
             return user;
         }
 
+        public bool DoUserCompleteResults(int userId)
+        {
+            bool isComplete = false;
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "SELECT * FROM Pronosticos WHERE idUsuario = @User";
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@User", userId);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        isComplete = true;
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+            return isComplete;
+        }
+
+
     }
 }

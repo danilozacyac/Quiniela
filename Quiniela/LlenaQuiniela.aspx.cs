@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Telerik.Web.UI;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,7 +12,7 @@ using Quiniela.Singleton;
 
 namespace Quiniela
 {
-    public partial class LlenaQuiniela : System.Web.UI.Page
+    public partial class LlenaQuiniela : Telerik.Web.UI.RadAjaxPage//System.Web.UI.Page
     {
         private int index;
         ObservableCollection<Partidos> listaPartidos = null;
@@ -45,19 +46,23 @@ namespace Quiniela
                     index = Session["Index"] as int? ?? -1;
                     RBtnAnterior.Enabled = (index == 0) ? false : true;
                     RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
+
+                    if (index == 47)
+                    {
+                        RBtnSiguientePaso.Visible = true;
+                        RBtnGuardar.Visible = true;
+                    }
                 }
 
                 if (Session["Complete"] == null || Convert.ToBoolean(Session["Complete"]) == false)
                 {
                     quinielaP.Visible = true;
                     mexicoP.Visible = false;
-                    RBtnGuardar.Visible = false;
                 }
                 else
                 {
                     quinielaP.Visible = false;
                     mexicoP.Visible = true;
-                    RBtnGuardar.Visible = true;
                 }
 
             }
@@ -108,27 +113,40 @@ namespace Quiniela
 
             if (index < listaPartidos.Count())
             {
-                Partidos partido = listaPartidos[index];
+                //if (index == 47)
+                //{
+                //    RBtnSiguientePaso_Click(null, null);
+                //    RBtnSiguientePaso.Visible = false;
+                //    RBtnGuardar.Visible = true;
+                //}
+                //else
+                //{
+                    Partidos partido = listaPartidos[index];
 
-                LblLocal.Text = partido.PaisLocal;
-                ImLocal.ImageUrl = "~/Resources/" + partido.IdPaisLocal + ".png";
+                    LblLocal.Text = partido.PaisLocal;
+                    ImLocal.ImageUrl = "~/Images/" + partido.IdPaisLocal + ".png";
 
-                LblVisita.Text = partido.PaisVisita;
-                ImVisita.ImageUrl = "~/Resources/" + partido.IdPaisVisita + ".png";
+                    LblVisita.Text = partido.PaisVisita;
+                    ImVisita.ImageUrl = "~/Images/" + partido.IdPaisVisita + ".png";
 
-                if (partido.IdPaisGanador != 0)
-                {
-                    if (partido.IdPaisGanador == partido.IdPaisLocal)
-                        RadLocal.Checked = true;
-                    else if (partido.IdPaisGanador == partido.IdPaisVisita)
-                        RadVisita.Checked = true;
-                    else if (partido.IdPaisGanador == 999)
-                        RadEmpate.Checked = true;
-                }
+                    if (partido.IdPaisGanador != 0)
+                    {
+                        if (partido.IdPaisGanador == partido.IdPaisLocal)
+                            RadLocal.Checked = true;
+                        else if (partido.IdPaisGanador == partido.IdPaisVisita)
+                            RadVisita.Checked = true;
+                        else if (partido.IdPaisGanador == 999)
+                            RadEmpate.Checked = true;
+                    }
+                //}
             }
             else
             {
+                RBtnSiguientePaso.Visible = false;
+                RBtnGuardar.Visible = true;
                 RBtnSiguientePaso_Click(null, null);
+                Page_Load(null, null);
+                
             }
         }
 
@@ -158,6 +176,8 @@ namespace Quiniela
             listaPartidos[33].GolesVisita = Convert.ToInt16(RTxtVisita3.Text);
 
             PartidosModel.SetNewPronosticos(listaPartidos,Convert.ToInt32(Session["IdUsuario"]));
+
+            Response.Redirect("MR2.aspx");
         }
 
         protected void RBtnSiguientePaso_Click(object sender, EventArgs e)

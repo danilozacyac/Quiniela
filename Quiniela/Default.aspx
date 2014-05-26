@@ -74,7 +74,7 @@
             </tr>
             <tr>
                 <td>
-                    Password
+                    Contraseña
                 </td>
                 <td>
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
@@ -86,7 +86,7 @@
             </tr>
             <tr>
                 <td>
-                    Confirm Password
+                    Confirmar contraseña
                 </td>
                 <td>
                     <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" />
@@ -117,8 +117,7 @@
                     <telerik:RadButton ID="RbtnRegistrar" runat="server" Text="Registrar" OnClick="RbtnRegistrar_Click"></telerik:RadButton>
                 </td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                </td>
+                    &nbsp;</td>
             </tr>
         </table>
 

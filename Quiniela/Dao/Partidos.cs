@@ -14,7 +14,10 @@ namespace Quiniela.Dao
         private int golesLocal;
         private int golesVisita;
         private int idPaisGanador;
+        private string paisGanador;
         private int tipoAcierto;
+
+        
 
         
 
@@ -123,6 +126,18 @@ namespace Quiniela.Dao
             set
             {
                 this.idPaisGanador = value;
+            }
+        }
+
+        public string PaisGanador
+        {
+            get
+            {
+                return this.paisGanador;
+            }
+            set
+            {
+                this.paisGanador = value;
             }
         }
 

@@ -19,14 +19,13 @@
 
                             <telerik:GridBoundColumn DataField="PaisLocal" HeaderText="Equipo Local" SortExpression="PaisLocal" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
                                                      UniqueName="PaisLocal" />
-                            <telerik:GridBoundColumn DataField="GolesLocal" HeaderText="" SortExpression="GolesLocal"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
-                                                     UniqueName="GolesLocal" />
-                            <telerik:GridBoundColumn DataField="GolesVisita" HeaderText="" SortExpression="GolesVisita" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
-                                                     UniqueName="GolesVisita" />
+                            
                             <telerik:GridBoundColumn DataField="PaisVisita" HeaderText="Equipo Visitante" SortExpression="PaisVisita" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
                                                      UniqueName="PaisVisita" />
-                            <telerik:GridBoundColumn DataField="Fecha" HeaderText="Fecha del partido" SortExpression="Fecha" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
-                                                     UniqueName="Fecha" />
+                            <telerik:GridDateTimeColumn  DataField="Fecha" HeaderText="Fecha del partido" SortExpression="Fecha" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                     UniqueName="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
+                            <telerik:GridBoundColumn DataField="PaisGanador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                     UniqueName="PaisGanador" />
                         </Columns>
 
                     </MasterTableView>

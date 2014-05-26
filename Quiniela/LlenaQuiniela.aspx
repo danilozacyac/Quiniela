@@ -30,14 +30,14 @@
                                 <table  style="left:35%; position:relative">
                                     <tr>
                                         <td>
-                                            <asp:Image ID="ImLocal" runat="server" ImageUrl="~/Resources/2.png" />
+                                            <asp:Image ID="ImLocal" runat="server" ImageUrl="~/Images/2.png" />
 
                                         </td>
                                         <td>
                                             <br />
                                         </td>
                                         <td>
-                                            <asp:Image ID="ImVisita" runat="server" ImageUrl="~/Resources/3.png"  />
+                                            <asp:Image ID="ImVisita" runat="server" ImageUrl="~/Images/3.png"  />
                                         </td>
                                     </tr>
                                     <tr>
@@ -96,14 +96,14 @@
                                 <table  style="left:35%; position:relative">
                                     <tr>
                                         <td>
-                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/3.png" />
+                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/3.png" />
 
                                         </td>
                                         <td>
                                             <br />
                                         </td>
                                         <td>
-                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Resources/4.png"  />
+                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/4.png"  />
                                         </td>
                                     </tr>
                                     <tr>
@@ -132,14 +132,14 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Image ID="Image3" runat="server" ImageUrl="~/Resources/1.png" />
+                                            <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/1.png" />
 
                                         </td>
                                         <td>
                                             <br />
                                         </td>
                                         <td>
-                                            <asp:Image ID="Image4" runat="server" ImageUrl="~/Resources/3.png"  />
+                                            <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/3.png"  />
                                         </td>
                                     </tr>
                                     <tr>
@@ -168,14 +168,14 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Image ID="Image5" runat="server" ImageUrl="~/Resources/2.png" />
+                                            <asp:Image ID="Image5" runat="server" ImageUrl="~/Images/2.png" />
 
                                         </td>
                                         <td>
                                             <br />
                                         </td>
                                         <td>
-                                            <asp:Image ID="Image6" runat="server" ImageUrl="~/Resources/3.png"  />
+                                            <asp:Image ID="Image6" runat="server" ImageUrl="~/Images/3.png"  />
                                         </td>
                                     </tr>
                                     <tr>
@@ -226,8 +226,8 @@
 
                     </telerik:RadWindow>
                     <telerik:RadButton ID="RBtnRevisar" runat="server" Text="Revisar Resultados" OnClick="RBtnRevisar_Click1"></telerik:RadButton>
-                    <telerik:RadButton ID="RBtnSiguientePaso" runat="server" Text="Siguiente" OnClick="RBtnSiguientePaso_Click"   ></telerik:RadButton>
-                    <telerik:RadButton ID="RBtnGuardar" runat="server" Text="Guardar" OnClick="RBtnGuardar_Click" Visible="false" ></telerik:RadButton>
+                    <telerik:RadButton ID="RBtnSiguientePaso" runat="server" Text="Siguiente" OnClick="RBtnSiguientePaso_Click"  Visible="false" ></telerik:RadButton>
+                    <telerik:RadButton ID="RBtnGuardar" runat="server" Text="Guardar" OnClick="RBtnGuardar_Click"  ></telerik:RadButton>
                 </section>
             </div>
         </form>

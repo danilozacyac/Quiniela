@@ -31,7 +31,7 @@
                 </AjaxSettings>
             </telerik:RadAjaxManager>
 
-            <div class="page">
+            <div class="initialPage">
                 <header>
                     <div id="title">
                         <h1>Brasil 2014</h1>
@@ -42,19 +42,16 @@
                 <nav style="background-color:#04B404; height:50px;" >
                     <ul id="menu" >
                         <li>
-                            <a id="A4" runat="server" href="~/LlenaQuiniela.aspx">Llenar Quiniela</a>
-                        </li>
-                        <li>
                             <a id="A1" runat="server" href="#">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="~/About">Tabla General</a>
+                            <a id="A2" runat="server" href="#">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/Contact">Resultados</a>
+                            <a id="A3" runat="server" href="#">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="~/Contact">Grupos</a>
+                            <a id="A5" runat="server" href="#">Grupos</a>
                         </li>
                     </ul>
                 </nav>
@@ -62,14 +59,30 @@
                 <section id="main">
                     <div>
                         <asp:ImageButton ID="ExportToPdf" Style="cursor: pointer;" ImageUrl="Pdf.png" ToolTip="Exporta tu quiniela a PDF"
-                                         AlternateText="Export to PDF" runat="server" OnClick="ExportToPdf_Click"></asp:ImageButton>
+                                         AlternateText="Export to PDF" runat="server" OnClick="ExportToPdf_Click" Visible="false"></asp:ImageButton>
 
                         <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
                         <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" >
-                            <ExportSettings FileName="ExportedRadGrid" OpenInNewWindow="False">
-                                <Pdf AllowCopy="True" AllowModify="True" AllowPrinting="True" PaperSize="A4" Title="Exported RadGrid" Subject="Exported RadGrid" />
+                            <ExportSettings FileName="QuinielaBrasil2014" OpenInNewWindow="False">
+                                <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Exported RadGrid" Subject="Exported RadGrid" />
                             </ExportSettings>
+                            <MasterTableView Width="100%" AutoGenerateColumns="False" DataKeyNames="Fecha">
+
+                                <Columns>
+                                    <telerik:GridDateTimeColumn  DataField="Fecha" HeaderText="Fecha del partido"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                                 UniqueName="Fecha" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-HorizontalAlign="Center" />
+                                    <telerik:GridBoundColumn DataField="Local" HeaderText="Equipo Local"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                             UniqueName="PaisLocal" ItemStyle-HorizontalAlign="Center" />
+
+                                    <telerik:GridBoundColumn DataField="Visitante" HeaderText="Equipo Visitante"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                             UniqueName="PaisVisita" ItemStyle-HorizontalAlign="Center"/>
+                                    
+                                    <telerik:GridBoundColumn DataField="Ganador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
+                                </Columns>
+
+                            </MasterTableView>
                         </telerik:RadGrid>
                     </div>
                 </section>

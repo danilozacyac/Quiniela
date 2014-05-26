@@ -26,8 +26,14 @@ namespace Quiniela
                 if (isCorrect)
                 {
                     Session["Idusuario"] = user.Idusuario;
+                    bool isComplete = new UsuariosModel().DoUserCompleteResults(user.Idusuario);
+
                     user = null;
-                    Response.Redirect("MR2.aspx");
+
+                    if (isComplete)
+                        Response.Redirect("MR2.aspx");
+                    else
+                        Response.Redirect("LlenaQuiniela.aspx");
                 }
                 else
                 {

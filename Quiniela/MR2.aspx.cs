@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using Telerik.Web.UI;
 
-public partial class MR2 : System.Web.UI.Page 
+public partial class MR2 : Telerik.Web.UI.RadAjaxPage// System.Web.UI.Page 
 {
     private string idUsuario;
     public string IdUsuario { get { return idUsuario; } }
@@ -18,7 +18,7 @@ public partial class MR2 : System.Web.UI.Page
         }
         else
         {
-            idUsuario = "select * from resultadosUsuarios WHERE IdUsuario = " + Session["IdUsuario"].ToString();
+            idUsuario = "select Fecha,Local,Visitante,Ganador, PuntosGanados from PronosticosUsuario WHERE IdUsuario = " + Session["IdUsuario"].ToString();
             DataBind();
         }
     }

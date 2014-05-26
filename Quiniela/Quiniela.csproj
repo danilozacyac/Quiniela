@@ -184,7 +184,9 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
-    <Resource Include="Content\back.jpg" />
+    <Content Include="Content\back.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\InitialSite.css" />
     <Content Include="Content\Probando.css" />
     <Content Include="Content\Site.css" />
@@ -201,6 +203,39 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Grupos.aspx" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\10.png" />
+    <Content Include="Images\11.png" />
+    <Content Include="Images\12.png" />
+    <Content Include="Images\13.png" />
+    <Content Include="Images\14.png" />
+    <Content Include="Images\15.png" />
+    <Content Include="Images\16.png" />
+    <Content Include="Images\17.png" />
+    <Content Include="Images\18.png" />
+    <Content Include="Images\19.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\20.png" />
+    <Content Include="Images\21.png" />
+    <Content Include="Images\22.png" />
+    <Content Include="Images\23.png" />
+    <Content Include="Images\24.png" />
+    <Content Include="Images\25.png" />
+    <Content Include="Images\26.png" />
+    <Content Include="Images\27.png" />
+    <Content Include="Images\28.png" />
+    <Content Include="Images\29.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\30.png" />
+    <Content Include="Images\31.png" />
+    <Content Include="Images\32.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\8.png" />
+    <Content Include="Images\9.png" />
+    <Content Include="Index.html" />
     <Content Include="LlenaQuiniela.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="MisResultados.aspx" />
@@ -292,7 +327,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
