@@ -45,13 +45,13 @@
                             <a id="A1" runat="server" href="#">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="#">Tabla General</a>
+                            <a id="A2" runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="#">Resultados</a>
+                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="#">Grupos</a>
+                            <a id="A5" runat="server" href="~/Grupos.aspx">Grupos</a>
                         </li>
                     </ul>
                 </nav>

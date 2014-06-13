@@ -30,16 +30,13 @@
                 <nav style="background-color:#04B404; height:50px;" >
                     <ul id="menu" >
                         <li>
-                            <a id="A4" runat="server" href="~/LlenaQuiniela.aspx">Llenar Quiniela</a>
-                        </li>
-                        <li>
-                            <a id="A1" runat="server" href="MR2.aspx">Mis Resultados</a>
+                            <a id="A1" runat="server" href="~/MR2.aspx">Mis Resultados</a>
                         </li>
                         <li>
                             <a id="A2" runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/Contact">Resultados</a>
+                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
                             <a id="A5" runat="server" href="~/#">Grupos</a>
@@ -69,16 +66,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Brasil" src="Resources/1.png" />
+                                                    <img alt="Brasil" src="Images/1.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Croacia" src="Resources/2.png" />
+                                                    <img alt="Croacia" src="Images/2.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="México" src="Resources/3.png" />
+                                                    <img alt="México" src="Images/3.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Camerún" src="Resources/4.png" />
+                                                    <img alt="Camerún" src="Images/4.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -125,16 +122,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="España" src="Resources/5.png" />
+                                                    <img alt="España" src="Images/5.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Holanda" src="Resources/6.png" />
+                                                    <img alt="Holanda" src="Images/6.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Chile" src="Resources/7.png" />
+                                                    <img alt="Chile" src="Images/7.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Australia" src="Resources/8.png" />
+                                                    <img alt="Australia" src="Images/8.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -181,16 +178,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Colombia" src="Resources/9.png" />
+                                                    <img alt="Colombia" src="Images/9.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Grecia" src="Resources/10.png" />
+                                                    <img alt="Grecia" src="Images/10.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Costa de Marfil" src="Resources/11.png" />
+                                                    <img alt="Costa de Marfil" src="Images/11.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Japón" src="Resources/12.png" />
+                                                    <img alt="Japón" src="Images/12.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -237,16 +234,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Uruguay" src="Resources/13.png" />
+                                                    <img alt="Uruguay" src="Images/13.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Costa Rica" src="Resources/14.png" />
+                                                    <img alt="Costa Rica" src="Images/14.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Inglaterra" src="Resources/15.png" />
+                                                    <img alt="Inglaterra" src="Images/15.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Italia" src="Resources/16.png" />
+                                                    <img alt="Italia" src="Images/16.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -293,16 +290,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Suiza" src="Resources/17.png" />
+                                                    <img alt="Suiza" src="Images/17.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Ecuador" src="Resources/18.png" />
+                                                    <img alt="Ecuador" src="Images/18.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Francia" src="Resources/19.png" />
+                                                    <img alt="Francia" src="Images/19.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Honduras" src="Resources/20.png" />
+                                                    <img alt="Honduras" src="Images/20.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -349,16 +346,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Argentina" src="Resources/21.png" />
+                                                    <img alt="Argentina" src="Images/21.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Bosnia" src="Resources/22.png" />
+                                                    <img alt="Bosnia" src="Images/22.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Irán" src="Resources/23.png" />
+                                                    <img alt="Irán" src="Images/23.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Nigeria" src="Resources/24.png" />
+                                                    <img alt="Nigeria" src="Images/24.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -405,16 +402,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Alemania" src="Resources/25.png" />
+                                                    <img alt="Alemania" src="Images/25.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Portugal" src="Resources/26.png" />
+                                                    <img alt="Portugal" src="Images/26.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Ghana" src="Resources/27.png" />
+                                                    <img alt="Ghana" src="Images/27.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="EUA" src="Resources/28.png" />
+                                                    <img alt="EUA" src="Images/28.png" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -461,16 +458,16 @@
                                         <table class="tablaGrupos" style="left:35%; position:relative">
                                             <tr>
                                                 <td>
-                                                    <img alt="Bélgica" src="Resources/29.png" />
+                                                    <img alt="Bélgica" src="Images/29.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Argelia" src="Resources/30.png" />
+                                                    <img alt="Argelia" src="Images/30.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Rusia" src="Resources/31.png" />
+                                                    <img alt="Rusia" src="Images/31.png" />
                                                 </td>
                                                 <td>
-                                                    <img alt="Corea" src="Resources/32.png" />
+                                                    <img alt="Corea" src="Images/32.png" />
                                                 </td>
                                             </tr>
                                             <tr>

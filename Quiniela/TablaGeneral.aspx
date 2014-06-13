@@ -38,19 +38,16 @@
                 <nav style="background-color:#04B404; height:50px;" >
                     <ul id="menu" >
                         <li>
-                            <a id="A4" runat="server" href="~/LlenaQuiniela.aspx">Llenar Quiniela</a>
-                        </li>
-                        <li>
                             <a id="A1" runat="server" href="~/MR2.aspx">Mis Resultados</a>
                         </li>
                         <li>
                             <a id="A2" runat="server" href="~/#">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/Contact">Resultados</a>
+                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="~/Contact">Grupos</a>
+                            <a id="A5" runat="server" href="~/Grupos.aspx">Grupos</a>
                         </li>
                     </ul>
                     <telerik:RadTabStrip ID="RadTabStrip1" runat="server"></telerik:RadTabStrip>
@@ -58,7 +55,7 @@
 
                 <section id="main">
                     <div>
-                        <asp:SqlDataSource SelectCommand="Select * FROM ResultadosUsuarios ORDER BY IdUsuario asc, Fecha asc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+                        <asp:SqlDataSource SelectCommand="Select * FROM TablaPosiciones ORDER BY PuntosTotales desc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
                         <telerik:RadGrid ID="RadGrid1" runat="server" ShowGroupPanel="True" GridLines="None" DataSourceID="DataSource1" PageSize="50"
                                          AllowSorting="True" AllowPaging="True" AllowFiltering="True">
                             <MasterTableView GroupLoadMode="server" ShowGroupFooter="False" GroupsDefaultExpanded="False">

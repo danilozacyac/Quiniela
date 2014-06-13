@@ -1,6 +1,6 @@
 ﻿using System;
 
-public partial class TablaGeneral : System.Web.UI.Page 
+public partial class TablaGeneral : Telerik.Web.UI.RadAjaxPage// System.Web.UI.Page 
 {
     protected void Page_Load(object sender, EventArgs e)
     {
