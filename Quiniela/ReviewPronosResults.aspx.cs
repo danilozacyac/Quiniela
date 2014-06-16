@@ -6,8 +6,14 @@ using Quiniela.Singleton;
 
 namespace Quiniela
 {
+    /// <summary>
+    /// Permite verificar los resultados que se han ingresado mientas se llena la quiniela
+    /// </summary>
+
     public partial class ReviewPronosResults : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ObservableCollection<Partidos> listaPartidos = Session["Partidos"] as ObservableCollection<Partidos>;

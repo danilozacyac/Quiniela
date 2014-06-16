@@ -9,7 +9,7 @@
 
 
 
-public partial class RadGroupedGridForm {
+public partial class ResultsManagement {
     
     /// <summary>
     /// Control RadStyleSheetManager1.
@@ -48,15 +48,6 @@ public partial class RadGroupedGridForm {
     protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
     
     /// <summary>
-    /// Control A4.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlAnchor A4;
-    
-    /// <summary>
     /// Control A1.
     /// </summary>
     /// <remarks>
@@ -84,20 +75,74 @@ public partial class RadGroupedGridForm {
     protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
     
     /// <summary>
-    /// Control DataSource1.
+    /// Control A5.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.SqlDataSource DataSource1;
+    protected global::System.Web.UI.HtmlControls.HtmlAnchor A5;
     
     /// <summary>
-    /// Control RadGrid1.
+    /// Control UpdatePanel1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadGrid RadGrid1;
+    protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+    
+    /// <summary>
+    /// Control RCbxPartidos.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadComboBox RCbxPartidos;
+    
+    /// <summary>
+    /// Control LblLocal.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label LblLocal;
+    
+    /// <summary>
+    /// Control LblVisita.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label LblVisita;
+    
+    /// <summary>
+    /// Control GoalLocal.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadNumericTextBox GoalLocal;
+    
+    /// <summary>
+    /// Control GoalVisita.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadNumericTextBox GoalVisita;
+    
+    /// <summary>
+    /// Control RBtnGuardarResultado.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadButton RBtnGuardarResultado;
 }

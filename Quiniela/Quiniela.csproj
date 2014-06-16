@@ -59,6 +59,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminTools\ResultsManagement.aspx.cs">
+      <DependentUpon>ResultsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTools\ResultsManagement.aspx.designer.cs">
+      <DependentUpon>ResultsManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dao\Equipos.cs" />
     <Compile Include="Dao\GruposDao.cs" />
     <Compile Include="Dao\Partidos.cs" />
@@ -115,19 +122,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RadGridExportWebForm.aspx.cs">
-      <DependentUpon>RadGridExportWebForm.aspx</DependentUpon>
+    <Compile Include="ResultReviewByMatch.aspx.cs">
+      <DependentUpon>ResultReviewByMatch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RadGridExportWebForm.aspx.designer.cs">
-      <DependentUpon>RadGridExportWebForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RadGroupedGridForm.aspx.cs">
-      <DependentUpon>RadGroupedGridForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RadGroupedGridForm.aspx.designer.cs">
-      <DependentUpon>RadGroupedGridForm.aspx</DependentUpon>
+    <Compile Include="ResultReviewByMatch.aspx.designer.cs">
+      <DependentUpon>ResultReviewByMatch.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReviewPronosResults.aspx.cs">
       <DependentUpon>ReviewPronosResults.aspx</DependentUpon>
@@ -148,6 +148,7 @@
     <Compile Include="Utils\PasswordHash.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminTools\ResultsManagement.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -274,9 +275,8 @@
     <Resource Include="Resources\31.png" />
     <Resource Include="Resources\27.png" />
     <Resource Include="Resources\brazucafavicon.ico" />
-    <Content Include="RadGridExportWebForm.aspx" />
-    <Content Include="RadGroupedGridForm.aspx" />
     <Resource Include="Resources\back.jpg" />
+    <Content Include="ResultReviewByMatch.aspx" />
     <Content Include="ReviewPronosResults.aspx" />
     <Content Include="TablaGeneral.aspx" />
     <Content Include="web.config">
