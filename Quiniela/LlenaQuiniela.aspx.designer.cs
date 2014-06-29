@@ -103,13 +103,13 @@ namespace Quiniela {
         protected global::System.Web.UI.WebControls.Label LblVisita;
         
         /// <summary>
-        /// Control RadLocal.
+        /// Control RTxtGolesLoca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadLocal;
+        protected global::Telerik.Web.UI.RadNumericTextBox RTxtGolesLoca;
         
         /// <summary>
         /// Control RadEmpate.
@@ -121,13 +121,13 @@ namespace Quiniela {
         protected global::System.Web.UI.WebControls.RadioButton RadEmpate;
         
         /// <summary>
-        /// Control RadVisita.
+        /// Control RTxtGolesVisita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadVisita;
+        protected global::Telerik.Web.UI.RadNumericTextBox RTxtGolesVisita;
         
         /// <summary>
         /// Control RBtnAnterior.

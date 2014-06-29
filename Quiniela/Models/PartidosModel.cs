@@ -28,7 +28,7 @@ namespace Quiniela.Models
                     conn.Open();
 
                     string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
-                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais ";
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE idPartido >= 49";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
