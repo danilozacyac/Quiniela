@@ -16,7 +16,7 @@
             <div class="initialPage">
                 <header>
                     <div id="title">
-                        <h1>Brasil 2014</h1>
+                        <h1>Copa América 2015</h1>
                     </div>
 
                 </header>
@@ -54,7 +54,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                         <%--   <asp:RadioButton ID="RadLocal" runat="server" Text="  Local" GroupName="Result"/>--%>
+                                            <asp:RadioButton ID="RadLocal" runat="server" Text="  Local" GroupName="Result"/>
                                         <telerik:RadNumericTextBox ID="RTxtGolesLoca" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
 
                                         </telerik:RadNumericTextBox>
@@ -63,7 +63,7 @@
                                             <asp:RadioButton ID="RadEmpate" runat="server" Text="  Empate" GroupName="Result" />
                                         </td>
                                         <td>
-                                        <%--<asp:RadioButton ID="RadVisita" runat="server" Text="  Visita" GroupName="Result"/>--%>
+                                        <asp:RadioButton ID="RadVisita" runat="server" Text="  Visita" GroupName="Result"/>
                                         <telerik:RadNumericTextBox ID="RTxtGolesVisita" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
                                         </td>
                                     </tr>

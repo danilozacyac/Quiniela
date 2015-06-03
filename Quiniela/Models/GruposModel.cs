@@ -22,7 +22,7 @@ namespace Quiniela.Models
                 {
                     conn.Open();
 
-                    string selstr = "SELECT * FROM vGrupos";
+                    string selstr = "SELECT * FROM vGrupos WHERE IdTorneo = 2";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 

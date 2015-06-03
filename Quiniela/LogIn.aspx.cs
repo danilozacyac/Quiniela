@@ -1,5 +1,4 @@
-﻿using Telerik.Web.UI;
-using System;
+﻿using System;
 using System.Linq;
 using Quiniela.Dao;
 using Quiniela.Models;

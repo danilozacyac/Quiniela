@@ -13,7 +13,7 @@
     <div class="initialPage">
         <header>
 			<div id="title">
-				<h1>Brasil 2014</h1>
+				<h1>Copa América 2015</h1> 
 			</div>
 			
 		</header>

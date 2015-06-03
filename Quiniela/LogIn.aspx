@@ -11,16 +11,16 @@
     <body>
         <form id="form1" runat="server">
 
-            <div class="initialPage">
+            <div class="initialPage"> 
                 <header>
                     <div id="title">
-                        <h1>Brasil 2014</h1>
+                        <h1>Copa América 2015</h1> 
                     </div>
 
                 </header>
 
-                <section id="main">
-                    <table border="0" cellpadding="0" cellspacing="0" style="left:35%; position:relative">
+                <section id="login">
+                    <table class="logint"  >
                         <tr>
                             <th colspan="3">
                                 Log In
@@ -30,7 +30,7 @@
                             <td>
                                 Usuario
                             </td>
-                            <td>
+                            <td >
                                 <asp:TextBox ID="TxtUsuario" runat="server" />
                             </td>
                             <td>
@@ -57,24 +57,24 @@
                                 <telerik:RadButton ID="RBtnIngreso" runat="server" Text="Ingresar" OnClick="RBtnIngreso_Click" ></telerik:RadButton>
                             </td>
                             <td>
-                                
+
                             </td>
                         </tr>
                     </table>
 
                 </section>
                 <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
-        <Scripts>
-            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
-            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
-            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
-        </Scripts>
-    </telerik:RadScriptManager>
-    <script type="text/javascript">
-        //Put your JavaScript code here.
-    </script>
-    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
-    </telerik:RadAjaxManager>
+                    <Scripts>
+                        <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+                        <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+                        <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+                    </Scripts>
+                </telerik:RadScriptManager>
+                <script type="text/javascript">
+                    //Put your JavaScript code here.
+                </script>
+                <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+                </telerik:RadAjaxManager>
             </div>
         </form>
     </body>

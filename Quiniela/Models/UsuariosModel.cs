@@ -103,7 +103,7 @@ namespace Quiniela.Models
                 {
                     conn.Open();
 
-                    string selstr = "SELECT * FROM Pronosticos WHERE idUsuario = @User AND idPartido >= 49";
+                    string selstr = "SELECT * FROM Pronosticos WHERE idUsuario = @User AND idPartido >= 49 AND IdTorneo = 2";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     cmd.Parameters.AddWithValue("@User", userId);
 
