@@ -21,49 +21,58 @@
 
                 </header>
 
-                <section id="main">
 
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
 
+                        <div id="main">
                             <div id="quinielaP" runat="server">
                                 <table  style="left:35%; position:relative">
                                     <tr>
                                         <td>
-                                            <asp:Image ID="ImLocal" runat="server" ImageUrl="~/Images/2.png" />
+                                            <asp:Image ID="ImLocal" runat="server" ImageUrl="~/Images/7.png" />
 
                                         </td>
                                         <td>
                                             <br />
                                         </td>
                                         <td>
-                                            <asp:Image ID="ImVisita" runat="server" ImageUrl="~/Images/3.png"  />
+                                            <asp:Image ID="ImVisita" runat="server" ImageUrl="~/Images/18.png"  />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="LblLocal" runat="server" Text="Alemania" Font-Size="XX-Large"></asp:Label>
+                                            <asp:Label ID="LblLocal" runat="server" Text=" " Font-Size="XX-Large"></asp:Label>
 
                                         </td>
                                         <td>
                                             <asp:Label ID="Label1" runat="server" Text="VS" Font-Size="XX-Large"></asp:Label>
                                         </td>
                                         <td>
-                                            <asp:Label ID="LblVisita" runat="server" Text="México" Font-Size="XX-Large"></asp:Label>
+                                            <asp:Label ID="LblVisita" runat="server" Text=" " Font-Size="XX-Large"></asp:Label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <asp:RadioButton ID="RadLocal" runat="server" Text="  Local" GroupName="Result"/>
-                                        <telerik:RadNumericTextBox ID="RTxtGolesLoca" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
 
-                                        </telerik:RadNumericTextBox>
                                         </td>
                                         <td>
                                             <asp:RadioButton ID="RadEmpate" runat="server" Text="  Empate" GroupName="Result" />
                                         </td>
                                         <td>
                                         <asp:RadioButton ID="RadVisita" runat="server" Text="  Visita" GroupName="Result"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <telerik:RadNumericTextBox ID="RTxtGolesLoca" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0" >
+
+                                        </telerik:RadNumericTextBox>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
                                         <telerik:RadNumericTextBox ID="RTxtGolesVisita" runat="server" MaxValue="20" MinValue="0" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
                                         </td>
                                     </tr>
@@ -92,7 +101,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id="mexicoP" runat="server">
+                            <%--<div id="mexicoP" runat="server">
                                 <table  style="left:35%; position:relative">
                                     <tr>
                                         <td>
@@ -217,7 +226,9 @@
                                         </td>
                                     </tr>
                                 </table>
+                            </div>--%>
                             </div>
+
                         </ContentTemplate>
                     </asp:UpdatePanel>
                     <telerik:RadWindow ID="RadWindow1" VisibleOnPageLoad="false" Title="Quiniela al momento" NavigateUrl="ReviewPronosResults.aspx" Width="700" Height="400"
@@ -228,7 +239,6 @@
                     <telerik:RadButton ID="RBtnRevisar" runat="server" Text="Revisar Resultados" OnClick="RBtnRevisar_Click1"></telerik:RadButton>
                     <telerik:RadButton ID="RBtnSiguientePaso" runat="server" Text="Siguiente" OnClick="RBtnSiguientePaso_Click"  Visible="false" ></telerik:RadButton>
                     <telerik:RadButton ID="RBtnGuardar" runat="server" Text="Guardar" OnClick="RBtnGuardar_Click"  ></telerik:RadButton>
-                </section>
             </div>
         </form>
     </body>

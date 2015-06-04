@@ -7,6 +7,7 @@
         <title></title>
         <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
         <link href="Content/Site.css" rel="stylesheet" />
+        <link href="Content/MenuCss.css" rel="stylesheet" />
     </head>
     <body>
         <form id="form1" runat="server">
@@ -30,35 +31,45 @@
             <div class="page">
                 <header>
                     <div id="title">
-                        <h1>Brasil 2014</h1>
+                        <h1>Copa América 2015</h1>
                     </div>
 
                 </header>
 
-                <nav style="background-color:#04B404; height:50px;" >
-                    <ul id="menu" >
+                <div id="cssmenu" >
+                    <ul  >
                         <li>
-                            <a id="A1" runat="server" href="~/MR2.aspx">Mis Resultados</a>
+                            <a runat="server" href="~/MR2.aspx">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="~/#">Tabla General</a>
+                            <a class="active" runat="server" href="#">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
+                            <a runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="~/Grupos.aspx">Grupos</a>
+                            <a class="last" runat="server" href="~/Grupos.aspx">Grupos</a>
                         </li>
                     </ul>
-                    <telerik:RadTabStrip ID="RadTabStrip1" runat="server"></telerik:RadTabStrip>
-                </nav>
+                </div>
 
                 <section id="main">
                     <div>
-                        <asp:SqlDataSource SelectCommand="Select * FROM TablaPosiciones ORDER BY PuntosTotales desc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
-                        <telerik:RadGrid ID="RadGrid1" runat="server" ShowGroupPanel="True" GridLines="None" DataSourceID="DataSource1" PageSize="50"
-                                         AllowSorting="True" AllowPaging="True" AllowFiltering="True">
-                            <MasterTableView GroupLoadMode="server" ShowGroupFooter="False" GroupsDefaultExpanded="False">
+                        <asp:SqlDataSource SelectCommand="Select * FROM TablaPosiciones WHERE IdTorneo = 2 ORDER BY PuntosTotales desc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+                        <telerik:RadGrid ID="RadGrid1" runat="server" ShowGroupPanel="False" GridLines="None" DataSourceID="DataSource1" PageSize="50"
+                                         AllowSorting="False" AllowPaging="True" AllowFiltering="True">
+                            <MasterTableView GroupLoadMode="server" ShowGroupFooter="False" GroupsDefaultExpanded="False" AutoGenerateColumns="false">
+                            <Columns>
+
+                            <telerik:GridBoundColumn DataField="Posicion" HeaderText="Posicion" SortExpression="Posicion" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                     UniqueName="Posicion" />
+
+                            <telerik:GridBoundColumn DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                     UniqueName="Nombre" />
+                            <telerik:GridBoundColumn DataField="PuntosTotales" HeaderText="Puntos"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                     UniqueName="PuntosTotales" />
+                            
+                        </Columns>
                             </MasterTableView>
                             <ClientSettings AllowDragToGroup="True">
                             </ClientSettings>

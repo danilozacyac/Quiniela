@@ -21,6 +21,7 @@ namespace Quiniela
             foreach (Partidos partido in listaPartidos)
             {
                 partido.PaisGanador = this.GetEquipoName(partido.IdPaisGanador);
+                partido.Marcador = partido.GolesLocal + " - " + partido.GolesVisita;
             }
 
             RadGrid1.DataSource = Session["Partidos"] as ObservableCollection<Partidos>;

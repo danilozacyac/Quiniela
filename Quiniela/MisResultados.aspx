@@ -7,6 +7,7 @@
         <title></title>
         <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
         <link href="Content/Site.css" rel="stylesheet" />
+        <link href="Content/MenuCss.css" rel="stylesheet" />
     </head>
     <body>
         <form id="form1" runat="server">
@@ -47,37 +48,44 @@
                 <div class="initialPage">
                     <header>
                         <div id="title">
-                            <h1>Brasil 2014</h1>
+                            <h1>Copa América 2015</h1>
                         </div>
 
                     </header>
 
-                    <nav style="background-color:#04B404; height:50px;" >
-                        <ul id="menu" >
-                            <li>
-                                <a id="A1" runat="server" href="~/MR2.aspx">Mis Resultados</a>
-                            </li>
-                            <li>
-                                <a id="A2" runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
-                            </li>
-                            <li>
-                                <a id="A3" runat="server" href="#">Resultados</a>
-                            </li>
-                            <li>
-                                <a id="A5" runat="server" href="~/Grupos.aspx">Grupos</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div id="cssmenu" >
+                    <ul  >
+                        <li>
+                            <a runat="server" href="~/MR2.aspx">Mis Resultados</a>
+                        </li>
+                        <li>
+                            <a runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
+                        </li>
+                        <li>
+                            <a class="active" runat="server" href="#">Resultados</a>
+                        </li>
+                        <li>
+                            <a id="A8" class="last" runat="server" href="~/Grupos.aspx">Grupos</a>
+                        </li>
+                    </ul>
+                </div>
 
                     <section id="main">
                         <div>
                             <asp:ImageButton OnClientClick="return exportToPdf()" ID="ImageButton1" Style="cursor: pointer;" ImageUrl="Pdf.png" Visible="false" AlternateText="Export to PDF" runat="server" />
 
-                            <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+                            <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" 
+                                ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" 
+                                ID="DataSource1" runat="server">
+                                <SelectParameters>
+                                    <asp:Parameter DefaultValue="2" Name="IdTorneo" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
 
-                            <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1">
+                            <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" 
+                                CellSpacing="-1" Culture="es-ES" GridLines="Both">
                                 <ExportSettings FileName="MiQuiniela" OpenInNewWindow="False">
-                                    <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Mi Quiniela Brasil 2014" Subject="Brasil2014" />
+                                    <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Mi Quiniela Copa América 2015" Subject="America2015" />
                                 </ExportSettings>
                             </telerik:RadGrid>
                         </div>

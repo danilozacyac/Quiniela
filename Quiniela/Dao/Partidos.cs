@@ -16,12 +16,14 @@ namespace Quiniela.Dao
         private int idPaisGanador;
         private string paisGanador;
         private int tipoAcierto;
+        private string marcador;
 
 
         private string partidoString;
         
 
         
+
 
         public int IdPartido
         {
@@ -164,6 +166,18 @@ namespace Quiniela.Dao
             set
             {
                 this.partidoString = value;
+            }
+        }
+
+        public string Marcador
+        {
+            get
+            {
+                return this.marcador;
+            }
+            set
+            {
+                this.marcador = value;
             }
         }
     }

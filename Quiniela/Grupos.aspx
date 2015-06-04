@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link href="Content/Site.css" rel="stylesheet" />
         <link href="Content/Probando.css" rel="stylesheet" />
-
+        <link href="Content/MenuCss.css" rel="stylesheet" />
         <script src="js/modernizr.custom.js"></script>
         <title></title>
     </head>
@@ -24,22 +24,22 @@
 
                 </header>
 
-                <nav style="background-color:#04B404; height:50px;" >
-                    <ul id="menu" >
+                <div id="cssmenu" >
+                    <ul  >
                         <li>
-                            <a id="A1" runat="server" href="~/MR2.aspx">Mis Resultados</a>
+                            <a runat="server" href="~/MR2.aspx">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
+                            <a runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
+                            <a runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="~/#">Grupos</a>
+                            <a class="active" runat="server" href="#">Grupos</a>
                         </li>
                     </ul>
-                </nav>
+                </div>
 
                 <section id="main">
                     <telerik:RadTabStrip ID="RadTabStrip1" runat="server" MultiPageID="RadMultiPag1" SelectedIndex="0" Skin="Silk" Width="100%">
@@ -171,7 +171,9 @@
                                 <table class="tablaGrupos" style="left:35%; position:relative">
                                     <tr>
                                         <td>
-                                            <img alt="Brasil" src="Images/1.png" />
+                                            <img alt="
+                                            
+                                            " src="Images/1.png" />
                                         </td>
                                         <td>
                                             <img alt="Colombia" src="Images/9.png" />

@@ -51,13 +51,13 @@ namespace Quiniela
 
                 if (Session["Complete"] == null || Convert.ToBoolean(Session["Complete"]) == false)
                 {
-                    quinielaP.Visible = true;
-                    mexicoP.Visible = false;
+                    //quinielaP.Visible = true;
+                    //mexicoP.Visible = false;
                 }
                 else
                 {
-                    quinielaP.Visible = false;
-                    mexicoP.Visible = true;
+                    //quinielaP.Visible = false;
+                    //mexicoP.Visible = true;
                 }
 
             }
@@ -98,6 +98,9 @@ namespace Quiniela
                 listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisVisita;
             else if (RadEmpate.Checked == true)
                 listaPartidos[index].IdPaisGanador = 999;
+
+            listaPartidos[index].GolesLocal = Convert.ToInt16(RTxtGolesLoca.Text);
+            listaPartidos[index].GolesVisita = Convert.ToInt16(RTxtGolesVisita.Text);
         }
 
         private void SetAnotherMatch()
@@ -133,6 +136,9 @@ namespace Quiniela
                         else if (partido.IdPaisGanador == 999)
                             RadEmpate.Checked = true;
                     }
+
+                    RTxtGolesLoca.Text = "0";
+                    RTxtGolesVisita.Text = "0";
                 //}
             }
             else
@@ -161,14 +167,14 @@ namespace Quiniela
 
         protected void RBtnGuardar_Click(object sender, EventArgs e)
         {
-            listaPartidos[1].GolesLocal = Convert.ToInt16(RTxtLocal1.Text);
-            listaPartidos[1].GolesVisita = Convert.ToInt16(RTxtVisita1.Text);
+            //listaPartidos[1].GolesLocal = Convert.ToInt16(RTxtLocal1.Text);
+            //listaPartidos[1].GolesVisita = Convert.ToInt16(RTxtVisita1.Text);
 
-            listaPartidos[16].GolesLocal = Convert.ToInt16(RTxtLocal2.Text);
-            listaPartidos[16].GolesVisita = Convert.ToInt16(RTxtVisita2.Text);
+            //listaPartidos[16].GolesLocal = Convert.ToInt16(RTxtLocal2.Text);
+            //listaPartidos[16].GolesVisita = Convert.ToInt16(RTxtVisita2.Text);
 
-            listaPartidos[33].GolesLocal = Convert.ToInt16(RTxtLocal3.Text);
-            listaPartidos[33].GolesVisita = Convert.ToInt16(RTxtVisita3.Text);
+            //listaPartidos[33].GolesLocal = Convert.ToInt16(RTxtLocal3.Text);
+            //listaPartidos[33].GolesVisita = Convert.ToInt16(RTxtVisita3.Text);
 
             PartidosModel.SetNewPronosticos(listaPartidos,Convert.ToInt32(Session["IdUsuario"]));
 
@@ -194,8 +200,8 @@ namespace Quiniela
 
             if (complete)
             {
-                quinielaP.Visible = false;
-                mexicoP.Visible = true;
+                //quinielaP.Visible = false;
+                //mexicoP.Visible = true;
                 RBtnGuardar.Visible = true;
             }
             else

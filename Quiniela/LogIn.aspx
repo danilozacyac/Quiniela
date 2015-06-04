@@ -7,62 +7,41 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title></title>
         <link href="Content/Site.css" rel="stylesheet" />
+        <link href="Content/Login.css" rel="stylesheet" />
     </head>
     <body>
         <form id="form1" runat="server">
 
-            <div class="initialPage"> 
+            <div class="initialPage">
                 <header>
                     <div id="title">
-                        <h1>Copa América 2015</h1> 
+                        <h1>Copa América 2015</h1>
                     </div>
 
                 </header>
 
-                <section id="login">
-                    <table class="logint"  >
-                        <tr>
-                            <th colspan="3">
-                                Log In
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Usuario
-                            </td>
-                            <td >
-                                <asp:TextBox ID="TxtUsuario" runat="server" />
-                            </td>
-                            <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ErrorMessage="Obligatorio" ForeColor="Red" ControlToValidate="TxtUsuario"
-                                                            runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Password
-                            </td>
-                            <td>
-                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
-                            </td>
-                            <td>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ErrorMessage="Obligatorio" ForeColor="Red" ControlToValidate="txtPassword"
-                                                            runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <telerik:RadButton ID="RBtnIngreso" runat="server" Text="Ingresar" OnClick="RBtnIngreso_Click" ></telerik:RadButton>
-                            </td>
-                            <td>
+                <div id="login">
+                    <h1>
+                        
+                    </h1>
+                        <fieldset>
+                            <p>
+                            <asp:TextBox ID="TxtUsuario" runat="server" required value="Username" onBlur="if(this.value == '')this.value = 'Username'" onFocus="if(this.value == 'Username')this.value = '' "/>
+                                <%--<input name="Username" runat="server" type="text" required value="Username" onBlur="if(this.value == '')this.value = 'Username'" onFocus="if(this.value == 'Username')this.value = '' ">--%>
+                            </p>
+                            <p>
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" required value="Password" onBlur="if(this.value == '')this.value = 'Password'" onFocus="if(this.value == 'Password')this.value = '' " />
+                                <%--<input type="password" required value="Password" onBlur="if(this.value == '')this.value = 'Password'" onFocus="if(this.value == 'Password')this.value = '' ">--%>
+                            </p>
+                            
+                            <p>
+                                <%--<input type="submit" value="Login" runat="server">--%>
+                                <asp:Button ID="BtnIngreso" runat="server" Text="LOGIN" OnClick="RBtnIngreso_Click" />
+                            </p>
+                        </fieldset>
+                    
+                </div> <!-- end login -->
 
-                            </td>
-                        </tr>
-                    </table>
-
-                </section>
                 <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
                     <Scripts>
                         <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />

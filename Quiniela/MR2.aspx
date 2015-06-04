@@ -7,6 +7,7 @@
         <title></title>
         <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
         <link href="Content/Site.css" rel="stylesheet" />
+        <link href="Content/MenuCss.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -39,22 +40,22 @@
 
                 </header>
 
-                <nav style="background-color:#04B404; height:50px;" >
-                    <ul id="menu" >
+                <div id="cssmenu" >
+                    <ul  >
                         <li>
-                            <a id="A1" runat="server" href="#">Mis Resultados</a>
+                            <a class="active" runat="server" href="#">Mis Resultados</a>
                         </li>
                         <li>
-                            <a id="A2" runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
+                            <a  runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
                         </li>
                         <li>
-                            <a id="A3" runat="server" href="~/MisResultados.aspx">Resultados</a>
+                            <a  runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a id="A5" runat="server" href="~/Grupos.aspx">Grupos</a>
+                            <a class="last" runat="server" href="~/Grupos.aspx">Grupos</a>
                         </li>
                     </ul>
-                </nav>
+                </div>
 
                 <section id="main">
                     <div>
@@ -64,7 +65,7 @@
                         <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
                         <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" >
-                            <ExportSettings FileName="QuinielaBrasil2014" OpenInNewWindow="False">
+                            <ExportSettings FileName="QuinielaAmerica2015" OpenInNewWindow="False">
                                 <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Exported RadGrid" Subject="Exported RadGrid" />
                             </ExportSettings>
                             <MasterTableView Width="100%" AutoGenerateColumns="False" DataKeyNames="Fecha">
@@ -77,11 +78,11 @@
 
                                     <telerik:GridBoundColumn DataField="Visitante" HeaderText="Equipo Visitante"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
                                                              UniqueName="PaisVisita" ItemStyle-HorizontalAlign="Center"/>
-                                    
+
                                     <telerik:GridBoundColumn DataField="Ganador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
                                 </Columns>
-
+                            
                             </MasterTableView>
                         </telerik:RadGrid>
                     </div>
