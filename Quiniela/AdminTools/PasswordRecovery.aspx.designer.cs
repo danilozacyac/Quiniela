@@ -9,7 +9,7 @@
 
 
 
-public partial class MR2 {
+public partial class PasswordRecovery {
     
     /// <summary>
     /// Control RadStyleSheetManager1.
@@ -39,6 +39,33 @@ public partial class MR2 {
     protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
     
     /// <summary>
+    /// Control TxtContraseña.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox TxtContraseña;
+    
+    /// <summary>
+    /// Control TxtConfirma.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox TxtConfirma;
+    
+    /// <summary>
+    /// Control BtnCambia.
+    /// </summary>
+    /// <remarks>
+    /// Campo generado automáticamente.
+    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button BtnCambia;
+    
+    /// <summary>
     /// Control RadAjaxManager1.
     /// </summary>
     /// <remarks>
@@ -48,29 +75,11 @@ public partial class MR2 {
     protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
     
     /// <summary>
-    /// Control ExportToPdf.
+    /// Control RadSkinManager1.
     /// </summary>
     /// <remarks>
     /// Campo generado automáticamente.
     /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.ImageButton ExportToPdf;
-    
-    /// <summary>
-    /// Control DataSource1.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.SqlDataSource DataSource1;
-    
-    /// <summary>
-    /// Control RadGrid1.
-    /// </summary>
-    /// <remarks>
-    /// Campo generado automáticamente.
-    /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    /// </remarks>
-    protected global::Telerik.Web.UI.RadGrid RadGrid1;
+    protected global::Telerik.Web.UI.RadSkinManager RadSkinManager1;
 }

@@ -6,7 +6,6 @@
     <head runat="server">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link href="Content/Site.css" rel="stylesheet" />
-        <link href="Content/Probando.css" rel="stylesheet" />
         <link href="Content/MenuCss.css" rel="stylesheet" />
         <script src="js/modernizr.custom.js"></script>
         <title></title>

@@ -54,6 +54,35 @@ namespace Quiniela.Models
             return message;
         }
 
+        public void UpdatePassword(string newPass, string userId)
+        {
+            SqlConnection sqlConne = new SqlConnection(connectionString);
+
+            SqlCommand cmd;
+
+            cmd = sqlConne.CreateCommand();
+            cmd.Connection = sqlConne;
+
+            try
+            {
+                sqlConne.Open();
+
+                cmd.CommandText = "UPDATE Usuarios  SET Password = @Password WHERE checker = @checker";
+                cmd.Parameters.AddWithValue("@Password", newPass);
+                cmd.Parameters.AddWithValue("@checker", userId);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (SqlException ex)
+            {
+            }
+            finally
+            {
+                sqlConne.Close();
+            }
+        }
+
+
         public Usuarios ValidateUser(string username)
         {
             Usuarios user = null;
@@ -65,7 +94,7 @@ namespace Quiniela.Models
                 {
                     conn.Open();
 
-                    string selstr = "SELECT * FROM Usuarios WHERE Nickname = @Nickname" ;
+                    string selstr = "SELECT * FROM Usuarios WHERE Nickname = @Nickname " ;
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     cmd.Parameters.AddWithValue("@Nickname", username);
 
@@ -90,6 +119,78 @@ namespace Quiniela.Models
             }
 
             return user;
+        }
+
+        public string DoMailExist(string mail)
+        {
+            string checkerString = null;
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "SELECT * FROM Usuarios WHERE Mail = @Mail ";
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@Mail", mail);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        checkerString = reader["Checker"].ToString();
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+            return checkerString;
+        }
+
+        public bool IsAValidChecker(string checker)
+        {
+            bool exist = false;
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "SELECT * FROM Usuarios WHERE Checker = @Checker ";
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@Checker", checker);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        exist = true;
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException)
+            {
+                exist = false;
+            }
+            finally
+            {
+
+            }
+
+            return exist;
         }
 
         public bool DoUserCompleteResults(int userId)

@@ -47,5 +47,10 @@ namespace Quiniela
             }
 
         }
+
+        protected void BtnRegistro_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

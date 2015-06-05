@@ -81,8 +81,10 @@
 
                                     <telerik:GridBoundColumn DataField="Ganador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
+                                    <telerik:GridBoundColumn DataField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="Marcador" ItemStyle-HorizontalAlign="Center"/>
                                 </Columns>
-                            
+
                             </MasterTableView>
                         </telerik:RadGrid>
                     </div>

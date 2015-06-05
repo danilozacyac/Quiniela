@@ -15,7 +15,7 @@
             <div class="initialPage">
                 <header>
                     <div id="title">
-                        <h1>Copa América 2015</h1>
+                        <h1></h1>
                     </div>
 
                 </header>
@@ -34,9 +34,17 @@
                                 <%--<input type="password" required value="Password" onBlur="if(this.value == '')this.value = 'Password'" onFocus="if(this.value == 'Password')this.value = '' ">--%>
                             </p>
                             
+                            <p><a href="AdminTools/SendRecoveryMail.aspx" class="forget" >¿Olvidaste tu contraseña?</a></p>
+
                             <p>
                                 <%--<input type="submit" value="Login" runat="server">--%>
-                                <asp:Button ID="BtnIngreso" runat="server" Text="LOGIN" OnClick="RBtnIngreso_Click" />
+                                <asp:Button ID="BtnIngreso" runat="server" Text="LOGIN" OnClick="RBtnIngreso_Click" CssClass="logButton" />
+                            </p>
+                             
+                            <p>
+                                <%--<input type="submit" value="Login" runat="server">--%>
+                                <asp:Button ID="BtnRegistro" runat="server" Text="Registrarme" CssClass="regButton"
+                                    OnClick="BtnRegistro_Click" />
                             </p>
                         </fieldset>
                     

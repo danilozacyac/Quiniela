@@ -111,14 +111,14 @@ namespace Quiniela
 
             if (index < listaPartidos.Count())
             {
-                //if (index == 47)
-                //{
-                //    RBtnSiguientePaso_Click(null, null);
-                //    RBtnSiguientePaso.Visible = false;
-                //    RBtnGuardar.Visible = true;
-                //}
-                //else
-                //{
+                if (index == 17)
+                {
+                    //RBtnSiguientePaso_Click(null, null);
+                    //RBtnSiguientePaso.Visible = false;
+                    RBtnGuardar.Visible = true;
+                }
+                else
+                {
                     Partidos partido = listaPartidos[index];
 
                     LblLocal.Text = partido.PaisLocal;
@@ -139,7 +139,7 @@ namespace Quiniela
 
                     RTxtGolesLoca.Text = "0";
                     RTxtGolesVisita.Text = "0";
-                //}
+                }
             }
             else
             {

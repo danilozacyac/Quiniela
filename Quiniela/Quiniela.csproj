@@ -61,12 +61,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminTools\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTools\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminTools\ResultsManagement.aspx.cs">
       <DependentUpon>ResultsManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminTools\ResultsManagement.aspx.designer.cs">
       <DependentUpon>ResultsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\SendRecoveryMail.aspx.cs">
+      <DependentUpon>SendRecoveryMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTools\SendRecoveryMail.aspx.designer.cs">
+      <DependentUpon>SendRecoveryMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dao\Equipos.cs" />
     <Compile Include="Dao\GruposDao.cs" />
@@ -140,13 +154,6 @@
     </Compile>
     <Compile Include="Singleton\EquiposSingleton.cs" />
     <Compile Include="Singleton\PartidosSingleton.cs" />
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
     <Compile Include="TablaGeneral.aspx.cs">
       <DependentUpon>TablaGeneral.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,7 +164,9 @@
     <Compile Include="Utils\PasswordHash.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminTools\PasswordRecovery.aspx" />
     <Content Include="AdminTools\ResultsManagement.aspx" />
+    <Content Include="AdminTools\SendRecoveryMail.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -194,17 +203,9 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
-    <Content Include="Content\america.jpg" />
     <Content Include="Content\america2.jpg" />
-    <Content Include="Content\back.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\component.css" />
-    <Content Include="Content\default.css" />
-    <Content Include="Content\InitialSite.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\MenuCss.css" />
-    <Content Include="Content\Probando.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -218,8 +219,6 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\icomoon.dev.svg" />
-    <Content Include="fonts\icomoon.svg" />
     <Content Include="Grupos.aspx" />
     <Content Include="Images\1.png" />
     <Content Include="Images\10.png" />
@@ -312,12 +311,8 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="fonts\icomoon.eot" />
-    <Content Include="fonts\icomoon.ttf" />
-    <Content Include="fonts\icomoon.woff" />
     <None Include="Properties\PublishProfiles\danilo.pubxml" />
     <None Include="Properties\PublishProfiles\LawebdeDanilo.pubxml" />
-    <Content Include="Site1.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -362,7 +357,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
