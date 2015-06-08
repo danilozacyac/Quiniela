@@ -28,7 +28,7 @@ namespace Quiniela.Models
                     conn.Open();
 
                     string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
-                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE idPartido >= 49 AND P.IdTorneo = 2";
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE idPartido >= 49 AND P.IdTorneo = 2 ORDER BY Fecha";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -120,8 +120,8 @@ namespace Quiniela.Models
                 connection.Open();
                 foreach (Partidos partido in listaPartidos)
                 {
-                    String query = "INSERT INTO Pronosticos (IdPartido,IdUsuario,GolesLocal,GolesVisita,IdPaisGanador,PuntosGanados) " + 
-                        "VALUES (@IdPartido,@IdUsuario,@GolesLocal,@GolesVisita,@IdPaisGanador,@PuntosGanados)";
+                    String query = "INSERT INTO Pronosticos (IdPartido,IdUsuario,GolesLocal,GolesVisita,IdPaisGanador,PuntosGanados,IdTorneo) " + 
+                        "VALUES (@IdPartido,@IdUsuario,@GolesLocal,@GolesVisita,@IdPaisGanador,@PuntosGanados,2)";
 
                     SqlCommand command = new SqlCommand(query, connection);
 

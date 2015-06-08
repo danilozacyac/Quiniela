@@ -10,6 +10,12 @@ namespace Quiniela
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DateTime limitDate = new DateTime(2015, 06, 11);
+
+            if (DateTime.Now >= limitDate)
+            {
+                BtnRegistro.Enabled = false;
+            }
 
         }
 

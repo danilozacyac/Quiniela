@@ -35,7 +35,7 @@ public partial class PasswordRecovery : System.Web.UI.Page
                     UsuariosModel model = new UsuariosModel();
                     model.UpdatePassword(newPass, checker);
 
-                    Response.Redirect("http:\\quiniela.lawebdedanilo.net");
+                    Response.Redirect("http://quiniela.lawebdedanilo.net/Login.aspx");
                 }
                 else
                 {

@@ -29,6 +29,8 @@
                                     CssClass="regButton" OnClick="BtnIngreso_Click" />
                             </p>
 
+
+                            <asp:Label ID="SendMail" runat="server" Text="Se te ha enviado un correo de recuperación, revisa tu bandeja de entrada" Visible="false"></asp:Label>
                             
                         </fieldset>
                     

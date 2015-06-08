@@ -238,7 +238,7 @@
                     </telerik:RadWindow>
                     <telerik:RadButton ID="RBtnRevisar" runat="server" Text="Revisar Resultados" OnClick="RBtnRevisar_Click1"></telerik:RadButton>
                     <telerik:RadButton ID="RBtnSiguientePaso" runat="server" Text="Siguiente" OnClick="RBtnSiguientePaso_Click"  Visible="false" ></telerik:RadButton>
-                    <telerik:RadButton ID="RBtnGuardar" runat="server" Text="Guardar" OnClick="RBtnGuardar_Click"  ></telerik:RadButton>
+                    <telerik:RadButton ID="RBtnGuardar" runat="server" Text="Guardar" OnClick="RBtnGuardar_Click"   ></telerik:RadButton>
             </div>
         </form>
     </body>

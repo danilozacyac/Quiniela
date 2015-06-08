@@ -42,9 +42,9 @@ namespace Quiniela
                     RBtnAnterior.Enabled = (index == 0) ? false : true;
                     RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
 
-                    if (index == 47)
+                    if (index == 16)
                     {
-                        RBtnSiguientePaso.Visible = true;
+                        //RBtnSiguientePaso.Visible = true;
                         RBtnGuardar.Visible = true;
                     }
                 }
@@ -88,6 +88,8 @@ namespace Quiniela
             this.SetAnotherMatch();
 
             Session["Partidos"] = listaPartidos;
+
+            RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
         }
 
         private void GetMatchResult()
@@ -111,7 +113,7 @@ namespace Quiniela
 
             if (index < listaPartidos.Count())
             {
-                if (index == 17)
+                if (index == 18)
                 {
                     //RBtnSiguientePaso_Click(null, null);
                     //RBtnSiguientePaso.Visible = false;
@@ -137,15 +139,15 @@ namespace Quiniela
                             RadEmpate.Checked = true;
                     }
 
-                    RTxtGolesLoca.Text = "0";
-                    RTxtGolesVisita.Text = "0";
+                    RTxtGolesLoca.Text = listaPartidos[index].GolesLocal.ToString();
+                    RTxtGolesVisita.Text = listaPartidos[index].GolesVisita.ToString();
                 }
             }
             else
             {
-                RBtnSiguientePaso.Visible = false;
+                //RBtnSiguientePaso.Visible = false;
                 RBtnGuardar.Visible = true;
-                RBtnSiguientePaso_Click(null, null);
+                //RBtnSiguientePaso_Click(null, null);
                 Page_Load(null, null);
                 
             }
@@ -167,6 +169,18 @@ namespace Quiniela
 
         protected void RBtnGuardar_Click(object sender, EventArgs e)
         {
+            if (index == 17)
+            {
+                if (RadLocal.Checked == true)
+                    listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisLocal;
+                else if (RadVisita.Checked == true)
+                    listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisVisita;
+                else if (RadEmpate.Checked == true)
+                    listaPartidos[index].IdPaisGanador = 999;
+
+                listaPartidos[index].GolesLocal = Convert.ToInt16(RTxtGolesLoca.Text);
+                listaPartidos[index].GolesVisita = Convert.ToInt16(RTxtGolesVisita.Text);
+            }
             //listaPartidos[1].GolesLocal = Convert.ToInt16(RTxtLocal1.Text);
             //listaPartidos[1].GolesVisita = Convert.ToInt16(RTxtVisita1.Text);
 
