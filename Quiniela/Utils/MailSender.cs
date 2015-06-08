@@ -51,7 +51,7 @@ namespace Quiniela.Utils
 
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress("luisalbertove80@hotmail.com");
-            //mailMessage.From = new MailAddress("donotreplylwdd@outlook.com");
+            //mailMessage.From = new MailAddress("donotreplyquiniela@outlook.com");
 
             //receiver email adress
             mailMessage.To.Add(toEmail);
@@ -73,7 +73,7 @@ namespace Quiniela.Utils
             smtpClient.Port = 25;
             //credentials to login in to hotmail account
             smtpClient.Credentials = new NetworkCredential("luisalbertove80@hotmail.com", "m33tm3h41f");
-            //smtpClient.Credentials = new NetworkCredential("donotreplylwdd@outlook.com", "m33tm3h41f");
+            //smtpClient.Credentials = new NetworkCredential("donotreplyquiniela@outlook.com", "m33tm3h41f");
             //enabled SSL
             smtpClient.EnableSsl = true;
             //Send an email

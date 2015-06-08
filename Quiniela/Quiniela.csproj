@@ -86,6 +86,7 @@
     <Compile Include="Dao\Equipos.cs" />
     <Compile Include="Dao\GruposDao.cs" />
     <Compile Include="Dao\Partidos.cs" />
+    <Compile Include="Dao\Torneos.cs" />
     <Compile Include="Dao\Usuarios.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -125,6 +126,7 @@
     <Compile Include="Models\EquiposModel.cs" />
     <Compile Include="Models\GruposModel.cs" />
     <Compile Include="Models\PartidosModel.cs" />
+    <Compile Include="Models\TorneosModel.cs" />
     <Compile Include="Models\UsuariosModel.cs" />
     <Compile Include="MR2.aspx.cs">
       <DependentUpon>MR2.aspx</DependentUpon>
@@ -155,6 +157,7 @@
     </Compile>
     <Compile Include="Singleton\EquiposSingleton.cs" />
     <Compile Include="Singleton\PartidosSingleton.cs" />
+    <Compile Include="Singleton\TorneoSingleton.cs" />
     <Compile Include="TablaGeneral.aspx.cs">
       <DependentUpon>TablaGeneral.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -320,7 +323,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
