@@ -12,7 +12,8 @@ public partial class Default : Telerik.Web.UI.RadAjaxPage//System.Web.UI.Page
 
     protected void RbtnRegistrar_Click(object sender, EventArgs e)
     {
-        if (txtPassword.Text.Equals(txtConfirmPassword.Text))
+        if (txtPassword.Text.Equals(txtConfirmPassword.Text) && !String.IsNullOrWhiteSpace(TxtPaterno.Text) && !String.IsNullOrWhiteSpace(TxtMaterno.Text) && !String.IsNullOrWhiteSpace(TxtNombre.Text)
+            && !String.IsNullOrWhiteSpace(txtUsername.Text))
         {
 
             Usuarios usuario = new Usuarios();

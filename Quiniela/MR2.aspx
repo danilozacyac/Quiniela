@@ -60,7 +60,7 @@
                 <section id="main">
                     <div>
                         <asp:ImageButton ID="ExportToPdf" Style="cursor: pointer;" ImageUrl="Pdf.png" ToolTip="Exporta tu quiniela a PDF"
-                                         AlternateText="Export to PDF" runat="server" OnClick="ExportToPdf_Click" Visible="false"></asp:ImageButton>
+                                         AlternateText="Export to PDF" runat="server" OnClick="ExportToPdf_Click" Visible="true"></asp:ImageButton>
 
                         <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
