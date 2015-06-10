@@ -193,9 +193,64 @@ namespace Quiniela.Models
             return exist;
         }
 
+        /// <summary>
+        /// Verifica si el usuario completo todos los pronósticos de los partidos del torneo
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public bool DoUserCompleteResults(int userId)
         {
             bool isComplete = false;
+
+            int pronosticados = 0;
+
+            int totalPartidos = this.GetTournamentMatchNumber(2);
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "SELECT COUNT(IdUsuario) AS Pronosticados FROM Pronosticos WHERE idUsuario = @User AND IdTorneo = 2";
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@User", userId);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                       pronosticados = Convert.ToInt16(reader["Pronosticados"]); 
+                    }
+                    conn.Close();
+                }
+
+                if (pronosticados > 0)
+                    isComplete = true;
+                //if (pronosticados == totalPartidos)
+                //    isComplete = true;
+            }
+            catch (SqlException)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+            return isComplete;
+        }
+
+
+        /// <summary>
+        /// Obtiene el número total de partidos que se llevarán a cabo en un torneo
+        /// </summary>
+        /// <param name="idTorneo"></param>
+        /// <returns></returns>
+        public int GetTournamentMatchNumber(int idTorneo)
+        {
+            int matchNumber = 0;
 
             try
             {
@@ -204,15 +259,15 @@ namespace Quiniela.Models
                 {
                     conn.Open();
 
-                    string selstr = "SELECT * FROM Pronosticos WHERE idUsuario = @User AND idPartido >= 49 AND IdTorneo = 2";
+                    string selstr = "SELECT COUNT(idTorneo) AS NumTorneo FROM partidos WHERE IdTorneo = @IdTorneo";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
-                    cmd.Parameters.AddWithValue("@User", userId);
+                    cmd.Parameters.AddWithValue("@IdTorneo", idTorneo);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        isComplete = true;
+                        matchNumber = Convert.ToInt16(reader["NumTorneo"]);
                     }
                     conn.Close();
                 }
@@ -226,7 +281,7 @@ namespace Quiniela.Models
 
             }
 
-            return isComplete;
+            return matchNumber;
         }
 
 

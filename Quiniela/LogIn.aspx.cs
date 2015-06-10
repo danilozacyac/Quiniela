@@ -33,6 +33,7 @@ namespace Quiniela
                     Session["Idusuario"] = user.Idusuario;
                     bool isComplete = new UsuariosModel().DoUserCompleteResults(user.Idusuario);
 
+                    
                     user = null;
 
                     if (isComplete)

@@ -62,6 +62,6 @@ public partial class ResultsManagement : Telerik.Web.UI.RadAjaxPage// System.Web
         PartidosModel.UpdatePronosticosGainPoint(partido);
         PartidosModel.UpdateGruposInfo(partido, 1, partido.IdPaisLocal);
         PartidosModel.UpdateGruposInfo(partido, 2, partido.IdPaisVisita);
-        PartidosModel.UpdateDiferenciaGoles();
+        PartidosModel.UpdateDiferenciaGoles(null);
     }
 }
