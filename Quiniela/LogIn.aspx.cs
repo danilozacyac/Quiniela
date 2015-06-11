@@ -10,13 +10,12 @@ namespace Quiniela
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DateTime limitDate = new DateTime(2015, 06, 11);
+            DateTime limitDate = new DateTime(2015, 06, 11, 13, 0, 0);
 
             if (DateTime.Now >= limitDate)
             {
                 BtnRegistro.Enabled = false;
             }
-
         }
 
         protected void RBtnIngreso_Click(object sender, EventArgs e)
@@ -25,14 +24,12 @@ namespace Quiniela
 
             if (user != null)
             {
-
                 bool isCorrect = PasswordHash.ValidatePassword(txtPassword.Text, user.Password);
 
                 if (isCorrect)
                 {
                     Session["Idusuario"] = user.Idusuario;
                     bool isComplete = new UsuariosModel().DoUserCompleteResults(user.Idusuario);
-
                     
                     user = null;
 
@@ -46,13 +43,11 @@ namespace Quiniela
                     ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Verifique sus datos de inicio de sesión');", true);
                     user = null;
                 }
-
             }
             else
             {
                 ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Verifique sus datos de inicio de sesión');", true);
             }
-
         }
 
         protected void BtnRegistro_Click(object sender, EventArgs e)
