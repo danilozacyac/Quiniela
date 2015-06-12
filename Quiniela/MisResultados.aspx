@@ -84,9 +84,28 @@
 
                             <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" 
                                 CellSpacing="-1" Culture="es-ES" GridLines="Both">
-                                <ExportSettings FileName="MiQuiniela" OpenInNewWindow="False">
+                                <ExportSettings FileName="MiQuiniela" OpenInNewWindow="True">
                                     <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Mi Quiniela Copa América 2015" Subject="America2015" />
                                 </ExportSettings>
+                                <MasterTableView Width="100%" AutoGenerateColumns="False" DataKeyNames="Fecha">
+
+                                <Columns>
+                                    <telerik:GridDateTimeColumn  DataField="Fecha" HeaderText="Fecha del partido"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                                 UniqueName="Fecha" DataFormatString="{0:dd/MM/yyyy}" ItemStyle-HorizontalAlign="Center" />
+                                    <telerik:GridBoundColumn DataField="Equipo_Local" HeaderText="Equipo Local"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                             UniqueName="PaisLocal" ItemStyle-HorizontalAlign="Center" />
+
+                                    <telerik:GridBoundColumn DataField="Equipo_Visita" HeaderText="Equipo Visitante"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
+                                                             UniqueName="PaisVisita" ItemStyle-HorizontalAlign="Center"/>
+
+                                    <telerik:GridBoundColumn DataField="Marcador" HeaderText="Marcador"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
+                                    <telerik:GridBoundColumn DataField="Grupo" HeaderText="Grupo"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="Grupo" ItemStyle-HorizontalAlign="Center"/>
+                                </Columns>
+
+                            </MasterTableView>
+
                             </telerik:RadGrid>
                         </div>
                     </section>

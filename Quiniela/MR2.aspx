@@ -65,7 +65,7 @@
                         <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
                         <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" >
-                            <ExportSettings FileName="QuinielaAmerica2015" OpenInNewWindow="False">
+                            <ExportSettings FileName="QuinielaAmerica2015" OpenInNewWindow="True">
                                 <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Exported RadGrid" Subject="Exported RadGrid" />
                             </ExportSettings>
                             <MasterTableView Width="100%" AutoGenerateColumns="False" DataKeyNames="Fecha">
