@@ -81,8 +81,10 @@
 
                                     <telerik:GridBoundColumn DataField="Ganador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
-                                    <telerik:GridBoundColumn DataField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
-                                                             UniqueName="Marcador" ItemStyle-HorizontalAlign="Center"/>
+                                    <telerik:GridHyperLinkColumn DataTextField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="Marcador" ItemStyle-HorizontalAlign="Center" 
+                                                             DataNavigateUrlFields="IdPartido"
+                                                             DataNavigateUrlFormatString="Charts/WebForm1.aspx?ID={0}" Target="_blank" />
                                 </Columns>
 
                             </MasterTableView>
