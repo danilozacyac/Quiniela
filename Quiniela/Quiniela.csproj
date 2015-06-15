@@ -83,6 +83,13 @@
     <Compile Include="AdminTools\SendRecoveryMail.aspx.designer.cs">
       <DependentUpon>SendRecoveryMail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Charts\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charts\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dao\Equipos.cs" />
     <Compile Include="Dao\GruposDao.cs" />
     <Compile Include="Dao\Partidos.cs" />
@@ -208,6 +215,7 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Charts\WebForm1.aspx" />
     <Content Include="Content\america2.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\MenuCss.css" />
@@ -262,6 +270,9 @@
     <Content Include="Images\7.png" />
     <Content Include="Images\8.png" />
     <Content Include="Images\9.png" />
+    <Content Include="Images\cold.svg" />
+    <Content Include="Images\half.svg" />
+    <Content Include="Images\hot.svg" />
     <Content Include="Index.html" />
     <Content Include="js\modernizr.custom.js" />
     <Content Include="js\ytmenu.js" />
