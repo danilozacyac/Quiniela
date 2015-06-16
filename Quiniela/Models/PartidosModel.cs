@@ -106,6 +106,51 @@ namespace Quiniela.Models
             return listaPartidos;
         }
 
+
+        public static Partidos GetMatchForChartTitle(int idPartido)
+        {
+            Partidos partido = new Partidos();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE P.IdPartido = @IdPartido AND P.IdTorneo = 2";
+                    SqlCommand cmd = new SqlCommand(selstr, conn);
+                    cmd.Parameters.AddWithValue("@IdPartido", idPartido);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        
+
+                        partido.IdPartido = reader["IdPartido"] as int? ?? -1;
+                        partido.Fecha = Convert.ToDateTime(reader["Fecha"]);
+                        partido.IdPaisLocal = reader["IdPaisLocal"] as int? ?? -1;
+                        partido.IdPaisVisita = reader["IdPaisVisita"] as int? ?? -1;
+                        partido.GolesLocal = reader["GolesLocal"] as int? ?? -1;
+                        partido.GolesVisita = reader["GolesVisita"] as int? ?? -1;
+                        partido.PaisLocal = reader["ELocal"].ToString();
+                        partido.PaisVisita = reader["EVisita"].ToString();
+                        partido.IdPaisGanador = reader["IdPaisGanador"] as int? ?? -23;
+                        partido.PartidoString = partido.PaisLocal + " vs " + partido.PaisVisita;
+
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SqlException)
+            {
+            }
+            finally
+            {
+            }
+
+            return partido;
+        }
+
         /// <summary>
         /// Guarda los resultados propuestos por los participantes para cada uno de los partidos
         /// </summary>

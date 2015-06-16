@@ -84,7 +84,7 @@
                                     <telerik:GridHyperLinkColumn DataTextField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="Marcador" ItemStyle-HorizontalAlign="Center" 
                                                              DataNavigateUrlFields="IdPartido"
-                                                             DataNavigateUrlFormatString="Charts/WebForm1.aspx?ID={0}" Target="_blank" />
+                                                             DataNavigateUrlFormatString="Charts/ResultsChart.aspx?ID={0}" Target="_blank" />
                                 </Columns>
 
                             </MasterTableView>

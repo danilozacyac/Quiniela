@@ -83,6 +83,13 @@
     <Compile Include="AdminTools\SendRecoveryMail.aspx.designer.cs">
       <DependentUpon>SendRecoveryMail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Charts\ResultsChart.aspx.cs">
+      <DependentUpon>ResultsChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charts\ResultsChart.aspx.designer.cs">
+      <DependentUpon>ResultsChart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Charts\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -174,6 +181,13 @@
     </Compile>
     <Compile Include="Utils\MailSender.cs" />
     <Compile Include="Utils\PasswordHash.cs" />
+    <Compile Include="Visualization\ResultsByMatch.aspx.cs">
+      <DependentUpon>ResultsByMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visualization\ResultsByMatch.aspx.designer.cs">
+      <DependentUpon>ResultsByMatch.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminTools\PasswordRecovery.aspx" />
@@ -215,6 +229,7 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Charts\ResultsChart.aspx" />
     <Content Include="Charts\WebForm1.aspx" />
     <Content Include="Content\america2.jpg" />
     <Content Include="Content\Login.css" />
@@ -285,6 +300,7 @@
     <Content Include="ResultReviewByMatch.aspx" />
     <Content Include="ReviewPronosResults.aspx" />
     <Content Include="TablaGeneral.aspx" />
+    <Content Include="Visualization\ResultsByMatch.aspx" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -334,7 +350,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
