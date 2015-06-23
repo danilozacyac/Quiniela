@@ -41,6 +41,7 @@ namespace Quiniela
                     index = Session["Index"] as int? ?? -1;
                     RBtnAnterior.Enabled = (index == 0) ? false : true;
                     RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
+                    this.SetAnotherMatch();
 
                     if (index == 16)
                     {
@@ -94,15 +95,18 @@ namespace Quiniela
 
         private void GetMatchResult()
         {
-            if (RadLocal.Checked == true)
+            int golesLocal = Convert.ToInt16(RTxtGolesLoca.Text);
+            int golesVisita = Convert.ToInt16(RTxtGolesVisita.Text);
+
+            if (golesLocal > golesVisita)
                 listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisLocal;
-            else if (RadVisita.Checked == true)
+            else if (golesVisita > golesLocal)
                 listaPartidos[index].IdPaisGanador = listaPartidos[index].IdPaisVisita;
-            else if (RadEmpate.Checked == true)
+            else if (golesLocal == golesVisita)
                 listaPartidos[index].IdPaisGanador = 999;
 
-            listaPartidos[index].GolesLocal = Convert.ToInt16(RTxtGolesLoca.Text);
-            listaPartidos[index].GolesVisita = Convert.ToInt16(RTxtGolesVisita.Text);
+            listaPartidos[index].GolesLocal = golesLocal;
+            listaPartidos[index].GolesVisita = golesVisita;
         }
 
         private void SetAnotherMatch()

@@ -235,6 +235,7 @@
     <Content Include="Content\MenuCss.css" />
     <Content Include="Content\oro2015.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\telerik.black.min.css" />
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -359,7 +360,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
