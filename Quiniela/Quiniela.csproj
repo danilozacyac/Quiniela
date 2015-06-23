@@ -231,9 +231,9 @@
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="Charts\ResultsChart.aspx" />
     <Content Include="Charts\WebForm1.aspx" />
-    <Content Include="Content\america2.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\MenuCss.css" />
+    <Content Include="Content\oro2015.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -279,7 +279,16 @@
     <Content Include="Images\35.png" />
     <Content Include="Images\36.png" />
     <Content Include="Images\37.png" />
+    <Content Include="Images\38.png" />
+    <Content Include="Images\39.png" />
     <Content Include="Images\4.png" />
+    <Content Include="Images\40.png" />
+    <Content Include="Images\41.png" />
+    <Content Include="Images\42.png" />
+    <Content Include="Images\43.png" />
+    <Content Include="Images\44.png" />
+    <Content Include="Images\45.png" />
+    <Content Include="Images\46.png" />
     <Content Include="Images\5.png" />
     <Content Include="Images\6.png" />
     <Content Include="Images\7.png" />

@@ -35,7 +35,7 @@
             <div class="initialPage">
                 <header>
                     <div id="title">
-                        <h1>Copa América 2015</h1>
+                        <h1>Copa Oro 2015</h1>
                     </div>
 
                 </header>

@@ -48,7 +48,7 @@
                 <div class="initialPage">
                     <header>
                         <div id="title">
-                            <h1>Copa América 2015</h1>
+                            <h1>Copa Oro 2015</h1>
                         </div>
 
                     </header>
@@ -78,14 +78,14 @@
                                 ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" 
                                 ID="DataSource1" runat="server">
                                 <SelectParameters>
-                                    <asp:Parameter DefaultValue="2" Name="IdTorneo" Type="Int32" />
+                                    <asp:Parameter DefaultValue="3" Name="IdTorneo" Type="Int32" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
 
                             <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" 
                                 CellSpacing="-1" Culture="es-ES" GridLines="Both">
                                 <ExportSettings FileName="MiQuiniela" OpenInNewWindow="True">
-                                    <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Mi Quiniela Copa América 2015" Subject="America2015" />
+                                    <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Mi Quiniela Copa Oro 2015" Subject="Oro2015" />
                                 </ExportSettings>
                                 <MasterTableView Width="100%" AutoGenerateColumns="False" DataKeyNames="Fecha">
 

@@ -13,7 +13,7 @@ public partial class MR2 : Telerik.Web.UI.RadAjaxPage// System.Web.UI.Page
         }
         else
         {
-            idUsuario = "select IdPartido,Fecha,Local,Visitante,Ganador, Marcador, PuntosGanados,TipoAcierto from PronosticosUsuario WHERE IdTorneo = 2 AND IdUsuario = " + Session["IdUsuario"].ToString();
+            idUsuario = "select IdPartido,Fecha,Local,Visitante,Ganador, Marcador, PuntosGanados,TipoAcierto from PronosticosUsuario WHERE IdTorneo = 3 AND IdUsuario = " + Session["IdUsuario"].ToString();
             DataBind();
         }
     }

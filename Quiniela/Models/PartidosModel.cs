@@ -28,7 +28,7 @@ namespace Quiniela.Models
                     conn.Open();
 
                     string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
-                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE idPartido >= 49 AND P.IdTorneo = 2 ORDER BY Fecha";
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE idPartido >= 49 AND P.IdTorneo = 3 ORDER BY Fecha";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -72,7 +72,7 @@ namespace Quiniela.Models
                     conn.Open();
 
                     string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
-                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE P.IdPaisGanador IS NULL AND P.IdTorneo = 2";
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE P.IdPaisGanador IS NULL AND P.IdTorneo = 3";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -117,7 +117,7 @@ namespace Quiniela.Models
                     conn.Open();
 
                     string selstr = "Select P.*,Pa.Pais ELocal,Pa2.Pais EVisita from Partidos P INNER JOIN Paises Pa ON P.idPaisLocal = Pa.idPais " +
-                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE P.IdPartido = @IdPartido AND P.IdTorneo = 2";
+                                    " INNER JOIN Paises Pa2 On P.idPaisVisita = Pa2.idPais WHERE P.IdPartido = @IdPartido AND P.IdTorneo = 3";
                     SqlCommand cmd = new SqlCommand(selstr, conn);
                     cmd.Parameters.AddWithValue("@IdPartido", idPartido);
                     SqlDataReader reader = cmd.ExecuteReader();

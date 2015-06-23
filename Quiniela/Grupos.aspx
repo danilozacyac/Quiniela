@@ -18,7 +18,7 @@
 
                 <header>
                     <div id="title">
-                        <h1>Copa América 2015</h1>
+                        <h1>Copa Oro 2015</h1>
                     </div>
 
                 </header>
@@ -55,26 +55,26 @@
                         <telerik:RadPageView ID="RadPageView1" runat="server" Height="1300" Style="overflow: hidden">
                             <div class="whiteDiv" ></div>
                             <div>
-                                <table class="tablaGrupos" style="left:35%; position:relative">
+                                <table class="tablaGrupos" >
                                     <tr>
                                         <td>
-                                            <img alt="Chile" src="Images/7.png" />
+                                            <img alt="EUA" src="Images/28.png" class="banderas"/>
                                         </td>
                                         <td>
-                                            <img alt="México" src="Images/3.png" />
+                                            <img alt="Panamá" src="Images/40.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Ecuador" src="Images/18.png" />
+                                            <img alt="Haití" src="Images/43.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Bolivia" src="Images/33.png" />
+                                            <img alt="Honduras" src="Images/20.png" class="banderas" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Chile</td>
-                                        <td>México</td>
-                                        <td>Ecuador</td>
-                                        <td>Bolivia</td>
+                                        <td>EUA</td>
+                                        <td>Panamá</td>
+                                        <td>Haití</td>
+                                        <td>Honduras</td>
                                     </tr>
 
                                 </table>
@@ -111,26 +111,26 @@
                         <telerik:RadPageView ID="RadPageView2" runat="server" Height="1300" Style="overflow: hidden">
                             <div class="whiteDiv" ></div>
                             <div>
-                                <table class="tablaGrupos" style="left:35%; position:relative">
+                                <table class="tablaGrupos" >
                                     <tr>
                                         <td>
-                                            <img alt="Argentina" src="Images/21.png" />
+                                            <img alt="Costa Rica" src="Images/14.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Uruguay" src="Images/13.png" />
+                                            <img alt="El Salvador" src="Images/41.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Paraguay" src="Images/34.png" />
+                                            <img alt="Jamaica" src="Images/35.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Jamaica" src="Images/35.png" />
+                                            <img alt="Canadá" src="Images/38.png" class="banderas" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Argentina</td>
-                                        <td>Uruguay</td>
-                                        <td>Paraguay</td>
+                                        <td>Costa Rica</td>
+                                        <td>El Salvador</td>
                                         <td>Jamaica</td>
+                                        <td>Canadá</td>
                                     </tr>
 
                                 </table>
@@ -167,28 +167,26 @@
                         <telerik:RadPageView ID="RadPageView3" runat="server" Height="1300" Style="overflow: hidden">
                             <div class="whiteDiv" ></div>
                             <div>
-                                <table class="tablaGrupos" style="left:35%; position:relative">
+                                <table class="tablaGrupos" >
                                     <tr>
                                         <td>
-                                            <img alt="
-                                            
-                                            " src="Images/1.png" />
+                                            <img alt="México" src="Images/3.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Colombia" src="Images/9.png" />
+                                            <img alt="Guatemala" src="Images/46.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Peru" src="Images/36.png" />
+                                            <img alt="Trinidad y Tobago" src="Images/42.png" class="banderas" />
                                         </td>
                                         <td>
-                                            <img alt="Venezuela" src="Images/37.png" />
+                                            <img alt="Cuba" src="Images/44.png" class="banderas" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Brasil</td>
-                                        <td>Colombia</td>
-                                        <td>Peru</td>
-                                        <td>Venezuela</td>
+                                        <td>México</td>
+                                        <td>Guatemala</td>
+                                        <td>Trinidad y Tobago</td>
+                                        <td>Cuba</td>
                                     </tr>
 
                                 </table>

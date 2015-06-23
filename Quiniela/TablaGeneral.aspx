@@ -31,7 +31,7 @@
             <div class="page">
                 <header>
                     <div id="title">
-                        <h1>Copa América 2015</h1>
+                        <h1>Copa Oro 2015</h1>
                     </div>
 
                 </header>
@@ -55,7 +55,7 @@
 
                 <section id="main">
                     <div>
-                        <asp:SqlDataSource SelectCommand="Select * FROM TablaPosiciones WHERE IdTorneo = 2 ORDER BY PuntosTotales desc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+                        <asp:SqlDataSource SelectCommand="Select * FROM TablaPosiciones WHERE IdTorneo = 3 ORDER BY PuntosTotales desc" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
                         <telerik:RadGrid ID="RadGrid1" runat="server" ShowGroupPanel="False" GridLines="None" DataSourceID="DataSource1" PageSize="50"
                                          AllowSorting="False" AllowPaging="True" AllowFiltering="True">
                             <MasterTableView GroupLoadMode="server" ShowGroupFooter="False" GroupsDefaultExpanded="False" AutoGenerateColumns="false">

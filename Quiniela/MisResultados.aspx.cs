@@ -15,7 +15,7 @@ public partial class MisResultados : Telerik.Web.UI.RadAjaxPage// System.Web.UI.
 
             string fechaHoy = DateTime.Now.Year + "-" + this.GetTwoLengthNumber(DateTime.Now.Month) + "-" + this.GetTwoLengthNumber(DateTime.Now.Day);
 
-            idUsuario = "select * from ResultadoPartidos WHERE Fecha <= '" + fechaHoy + "'";
+            idUsuario = "select * from ResultadoPartidos WHERE Fecha <= '" + fechaHoy + "' and IDTorneo = 3 Order By Fecha";
             DataBind();
         }
     }

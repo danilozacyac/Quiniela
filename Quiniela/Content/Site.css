@@ -6,7 +6,7 @@ to use a different color start by replacing all instances of
 body
 {
     background-color: #5c87b2;
-    background-image: url('america2.jpg') ;
+    background-image: url('oro2015.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 75%;
@@ -236,7 +236,7 @@ input[type="password"]
 .tablaGrupos
 {
     border: hidden;
-    left: 35%; 
+    left: 10%; 
     position: relative;
     font-size: larger;
     font-weight: bold;
@@ -379,4 +379,11 @@ table.logint
     width: 70%;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+
+.banderas
+{
+    width: 256px;
+    height: 256px;
 }
