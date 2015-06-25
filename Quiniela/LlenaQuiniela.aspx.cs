@@ -185,16 +185,8 @@ namespace Quiniela
                 listaPartidos[index].GolesLocal = Convert.ToInt16(RTxtGolesLoca.Text);
                 listaPartidos[index].GolesVisita = Convert.ToInt16(RTxtGolesVisita.Text);
             }
-            //listaPartidos[1].GolesLocal = Convert.ToInt16(RTxtLocal1.Text);
-            //listaPartidos[1].GolesVisita = Convert.ToInt16(RTxtVisita1.Text);
-
-            //listaPartidos[16].GolesLocal = Convert.ToInt16(RTxtLocal2.Text);
-            //listaPartidos[16].GolesVisita = Convert.ToInt16(RTxtVisita2.Text);
-
-            //listaPartidos[33].GolesLocal = Convert.ToInt16(RTxtLocal3.Text);
-            //listaPartidos[33].GolesVisita = Convert.ToInt16(RTxtVisita3.Text);
-
-            PartidosModel.SetNewPronosticos(listaPartidos,Convert.ToInt32(Session["IdUsuario"]));
+            
+            PartidosModel.SetNewPronosticos(listaPartidos,Convert.ToInt32(Session["IdUsuario"]),3);
 
             Response.Redirect("MR2.aspx");
         }

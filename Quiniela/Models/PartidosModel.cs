@@ -156,7 +156,7 @@ namespace Quiniela.Models
         /// </summary>
         /// <param name="listaPartidos"></param>
         /// <param name="idUser"></param>
-        public static void SetNewPronosticos(ObservableCollection<Partidos> listaPartidos, int idUser)
+        public static void SetNewPronosticos(ObservableCollection<Partidos> listaPartidos, int idUser,int idTorneo)
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -166,7 +166,7 @@ namespace Quiniela.Models
                 foreach (Partidos partido in listaPartidos)
                 {
                     String query = "INSERT INTO Pronosticos (IdPartido,IdUsuario,GolesLocal,GolesVisita,IdPaisGanador,PuntosGanados,IdTorneo) " + 
-                        "VALUES (@IdPartido,@IdUsuario,@GolesLocal,@GolesVisita,@IdPaisGanador,@PuntosGanados,2)";
+                        "VALUES (@IdPartido,@IdUsuario,@GolesLocal,@GolesVisita,@IdPaisGanador,@PuntosGanados,@IdTorneo)";
 
                     SqlCommand command = new SqlCommand(query, connection);
 
@@ -187,6 +187,9 @@ namespace Quiniela.Models
 
                     command.Parameters.Add("@PuntosGanados", SqlDbType.NChar);
                     command.Parameters["@PuntosGanados"].Value = 0;
+
+                    command.Parameters.Add("@IdTorneo", SqlDbType.NChar);
+                    command.Parameters["@IdTorneo"].Value = idTorneo ;
                     
                     command.ExecuteNonQuery();
 

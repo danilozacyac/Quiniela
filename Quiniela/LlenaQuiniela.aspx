@@ -27,7 +27,7 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
 
-                        <div id="main">
+                        <div id="llena">
                             <div id="quinielaP" runat="server">
                                 <table  >
                                     <tr>

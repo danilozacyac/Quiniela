@@ -113,9 +113,17 @@ header h1, #header h1
 
 #main
 {
-    background-color: transparent;
+    background-color: white;
     padding: 30px 30px 15px 30px;
     margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+#llena
+{
+    background-color: transparent;
+    padding: 30px 30px 15px 30px;
+    /*margin-bottom: 30px;*/
     _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
 }
 
