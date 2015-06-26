@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MR2.aspx.cs" Inherits="MR2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PronosticosPorParticipante.aspx.cs" Inherits="Quiniela.PronosticosPorParticipante" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
+    <head id="Head1" runat="server">
         <title></title>
         <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
         <link href="Content/Site.css" rel="stylesheet" />
@@ -43,27 +43,31 @@
                 <div id="cssmenu" >
                     <ul  >
                         <li>
-                            <a class="active" runat="server" href="#">Mis Resultados</a>
+                            <a id="A1" class="active" runat="server" href="#">Mis Resultados</a>
                         </li>
                         <li>
-                            <a  runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
+                            <a id="A2"  runat="server" href="~/TablaGeneral.aspx">Tabla General</a>
                         </li>
                         <li>
-                            <a  runat="server" href="~/MisResultados.aspx">Resultados</a>
+                            <a id="A3"  runat="server" href="~/MisResultados.aspx">Resultados</a>
                         </li>
                         <li>
-                            <a class="last" runat="server" href="~/Grupos.aspx">Grupos</a>
+                            <a id="A4" class="last" runat="server" href="~/Grupos.aspx">Grupos</a>
                         </li>
                     </ul>
                 </div>
 
                 <section id="main">
                     <div>
+                        <div><asp:Label ID="Label1" runat="server" CssClass="labelPaises" ><%# Nombre %></asp:Label></div>
+                        
                         <asp:ImageButton ID="ExportToPdf" Style="cursor: pointer;" ImageUrl="Pdf.png" ToolTip="Exporta tu quiniela a PDF"
                                          AlternateText="Export to PDF" runat="server" OnClick="ExportToPdf_Click" Visible="true"></asp:ImageButton>
 
-                        <asp:SqlDataSource SelectCommand="<%# IdUsuario %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
 
+
+                        <asp:SqlDataSource SelectCommand="<%# QueryString %>" ConnectionString="<%$ ConnectionStrings:QuinielaMundialConnectionString %>" ProviderName="System.Data.SqlClient" ID="DataSource1" runat="server"></asp:SqlDataSource>
+                        
                         <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="DataSource1" >
                             <ExportSettings FileName="QuinielaAmerica2015" OpenInNewWindow="True">
                                 <Pdf AllowCopy="False" AllowModify="False" AllowPrinting="True" PaperSize="A4" Title="Exported RadGrid" Subject="Exported RadGrid" />
@@ -81,8 +85,7 @@
 
                                     <telerik:GridBoundColumn DataField="Ganador" HeaderText="Mi Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="PaisGanador" ItemStyle-HorizontalAlign="Center"/>
-                                    <telerik:GridHyperLinkColumn DataTextField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" 
-                                                             HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                    <telerik:GridHyperLinkColumn DataTextField="Marcador" HeaderText="Marcador Pronostico"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                              UniqueName="Marcador" ItemStyle-HorizontalAlign="Center" 
                                                              DataNavigateUrlFields="IdPartido"
                                                              DataNavigateUrlFormatString="Charts/ResultsChart.aspx?ID={0}" Target="_blank" />
@@ -96,4 +99,3 @@
         </form>
     </body>
 </html>
-

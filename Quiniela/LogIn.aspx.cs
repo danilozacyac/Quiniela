@@ -10,7 +10,7 @@ namespace Quiniela
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DateTime limitDate = new DateTime(2015, 06, 11, 13, 0, 0);
+            DateTime limitDate = new DateTime(2015, 07, 06, 13, 0, 0);
 
             if (DateTime.Now >= limitDate)
             {

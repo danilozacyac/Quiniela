@@ -64,8 +64,11 @@
                             <telerik:GridBoundColumn DataField="Posicion" HeaderText="Posicion" SortExpression="Posicion" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
                                                      UniqueName="Posicion" />
 
-                            <telerik:GridBoundColumn DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true"
-                                                     UniqueName="Nombre" />
+                            <telerik:GridHyperLinkColumn DataTextField="Nombre" HeaderText="Nombre"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
+                                                             UniqueName="Nombre" DataNavigateUrlFields="IdUsuario,Nombre"
+                                                             DataNavigateUrlFormatString="PronosticosPorParticipante.aspx/{0}_{1}" Target="_blank" />
+
+                           
                             <telerik:GridBoundColumn DataField="PuntosTotales" HeaderText="Puntos"  HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Bold="true" ItemStyle-ForeColor="Red"
                                                      UniqueName="PuntosTotales" />
                             

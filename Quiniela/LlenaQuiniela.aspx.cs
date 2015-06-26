@@ -41,7 +41,10 @@ namespace Quiniela
                     index = Session["Index"] as int? ?? -1;
                     RBtnAnterior.Enabled = (index == 0) ? false : true;
                     RBtnSiguiente.Enabled = (index == listaPartidos.Count - 1) ? false : true;
-                    this.SetAnotherMatch();
+                    //this.SetAnotherMatch();
+
+                    if (!Page.IsPostBack)
+                        this.SetAnotherMatch();
 
                     if (index == 16)
                     {

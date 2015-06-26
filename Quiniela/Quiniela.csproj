@@ -149,6 +149,13 @@
     <Compile Include="MR2.aspx.designer.cs">
       <DependentUpon>MR2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PronosticosPorParticipante.aspx.cs">
+      <DependentUpon>PronosticosPorParticipante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PronosticosPorParticipante.aspx.designer.cs">
+      <DependentUpon>PronosticosPorParticipante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -307,6 +314,7 @@
     <Content Include="MR2.aspx" />
     <Content Include="Pdf.png" />
     <Resource Include="Resources\brazucafavicon.ico" />
+    <Content Include="PronosticosPorParticipante.aspx" />
     <Content Include="ResultReviewByMatch.aspx" />
     <Content Include="ReviewPronosResults.aspx" />
     <Content Include="TablaGeneral.aspx" />
@@ -360,7 +368,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
